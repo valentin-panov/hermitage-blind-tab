@@ -12,6 +12,7 @@ body {
     padding: 0;
     background-color: @bgcWhite;
 }
+
 button {
     margin: 0;
     padding: 0;
@@ -20,35 +21,57 @@ button {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+
     &:focus {
         -moz-outline-radius: 6px;
     }
 }
+
+html[data-font-size='small'] {
+    font-size: small;
+}
+
+html[data-font-size='medium'] {
+    font-size: medium;
+}
+
+html[data-font-size='large'] {
+    font-size: large;
+}
+
+.active {
+    background-color: @bgcWhite;
+    color: @fontColorBlack;
+}
+
 .block-container {
-    min-width: 320px;
     max-width: 1600px;
     position: relative;
-    padding-left: 16px;
-    padding-top: 40px;
+    padding-left: 1em;
+    padding-top: 2.5em;
 }
+
 .block-close {
     position: absolute;
     width: 16px;
     height: 16px;
     right: 24px;
     top: 30px;
+
     &__line {
         position: relative;
+
         &:before {
             content: '';
             position: absolute;
             width: 16px;
-            height: 2px;            
+            height: 2px;
             left: 0;
             top: 0;
             transform: rotate(45deg);
             background-color: black;
         }
+
         &:after {
             content: '';
             position: absolute;
@@ -62,344 +85,176 @@ button {
     }
 }
 
-.block-palette {
-    &__title {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 8px;
+.block {
+    &-name {
+        font-size: 1em;
     }
-    &__btn {
-        display: flex;
-        margin-bottom: 16px;
-    }
-    &__standart {
-       display: block;
-       width: 108px;
-       height: 32px;
-       background-color: @bgcWhite; 
-       border: 2px solid @bgcBlack;
-       border-radius: 8px;
-       font-size: 14px;
-       padding: 4px 8px;
-       text-align: center;
-       margin-right: 8px;
 
+    &__element {
+        display: flex;
+        height: 2.125em;
+        margin-bottom: 1em;
+        background-color: @bgcBlack;
+        color: @fontColorWhite;
+        border: 0.125em solid @bgcBlack;
+        border-radius: 0.5em;
+        box-sizing: border-box;
+    }
+    &__element_mode {
+        display: block;
+        box-sizing: border-box;
+        border: 0.125em solid @bgcBlack;
+        border-radius: 0.5em;
+        font-size: 1em;
+        padding: 0.25em 0.5em;
+        margin-right: 0.5em;
 
-    }
-    &__inverse {
-        display: block;
-        width: 85px;
-        height: 32px;
-        background-color: @bgcBlack;
-        color: @fontColorWhite;
-        border: 2px solid @bgcBlack;
-        text-align: center;
-        padding: 4px 8px;
-        border-radius: 8px;
-        font-size: 14px;
-        margin-right: 8px;
-    }
-    &__blue {
-        display: block;
-        width: 62px;
-        height: 32px;
-        background-color: @backgroundBlue;
-        color: @fontColorBlue;
-        text-align: center;
-        padding: 4px 8px;
-        border: 2px solid @backgroundBlue;
-        border-radius: 8px;
-        font-size: 14px;
-    }
-}
-.block-font-size {
-    &__title {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 8px;
-    }
-    &__btn {
-        display: flex;
-        width: 204px;
-        height: 32px;
-        background-color: @bgcBlack;
-        border: 2px solid @bgcBlack;
-        border-radius: 8px; 
-        margin-bottom: 16px;
-    }
-    &__small {
-        display: block;
-        width: 68px;
-        height: 32px;
-        padding: 2px 16px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        margin-right: 2px;
-        &:active {
+        &_standart {
             color: @fontColorBlack;
             background-color: @bgcWhite;
         }
-    }
-    &__medium {
-        display: block;
-        width: 68px;
-        height: 32px;
-        padding: 2px 16px;
-        font-size: 20px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        margin-right: 2px;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
+
+        &_inverse {
+            background-color: @bgcBlack;
+            color: @fontColorWhite;
         }
-    }
-    &__large {
-        display: block;
-        width: 68px;
-        height: 32px;
-        padding: 0 16px;
-        font-size: 24px;
-        background-color: @bgcBlack;
-        color: @fontColorWhite;
-        border-radius: 6px;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
+
+        &_blue {
+            background-color: @backgroundBlue;
+            color: @fontColorBlue;
+            border: 0.125em solid @backgroundBlue;
         }
-    }
-}
-.block-letter-spacing {
-    &__title {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 8px;
-    }
-    &__btn {
-        display: flex;
-        width: 278px;
-        height: 32px;
-        background-color: @bgcBlack;
-        border: 2px solid @bgcBlack;
-        border-radius: 8px; 
-        margin-bottom: 16px;
-    }
-    &__small {
-        display: block;
-        width: 82px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        margin-right: 2px;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
+
+        &_small {
+            padding: 0.125em 1.5em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+            margin-right: 2px;
         }
-    }
-    &__medium {
-        display: block;
-        width: 94px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        margin-right: 2px;
-        letter-spacing: 0.1em;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
+
+        &_medium {
+            padding: 0.125em 1.5em;
+            font-size: 1.25em;
+            border-radius: 0.375em;
+            margin-right: 2px;
         }
-    }
-    &__large {
-        display: block;
-        width: 100px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        letter-spacing: 0.2em;
-        text-align: center;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
+
+        &_large {
+            padding: 0.05em 1.4em;
+            font-size: 1.5em;
+            border-radius: 0.375em;
+        }
+
+        &_normal {
+            padding: 0.125em 0.5em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+            margin-right: 2px;
+        }
+
+        &_middle {
+            padding: 0.125em 0.5em;
+            font-size: 0.875em;
+            letter-spacing: 0.1em;
+            border-radius: 0.375em;
+            margin-right: 2px;
+        }
+
+        &_big {
+            padding: 0.125em 0.5em;
+            font-size: 0.875em;
+            letter-spacing: 0.2em;
+            border-radius: 0.375em;
+        }
+        &_show {
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+            margin-right: 2px;
+        }
+        &_hide {
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+        }
+        &_sansserif {
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+            margin-right: 2px;
+        }
+        &_serif {
+            font-family: Times New Roman, serif;
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+        }
+        &_single {
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+            margin-right: 2px;
+
+        }
+        &_mid {
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+            margin-right: 2px;
+
+        }
+        &_double {
+            padding: 0.125em 0.6em;
+            font-size: 0.875em;
+            border-radius: 0.375em;
+
         }
     }
 }
-.block-img {
-    &__title {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 8px;
-    }
-    &__btn {
-        display: flex;
-        width: 154px;
-        height: 32px;
-        background-color: @bgcBlack;
-        border: 2px solid @bgcBlack;
-        border-radius: 8px; 
-        margin-bottom: 16px; 
-    }
-    &__show {
-        display: block;
-        width: 80px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        text-align: center;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        }
-    }
-    &__hide {
-        display: block;
-        width: 74px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        text-align: center;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        } 
-    }
+
+.title {
+    margin-bottom: 0.5em;
 }
-.block-font-type {
-    &__title {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 8px;
-    }
-    &__btn {
-        display: flex;
-        width: 220px;
-        height: 32px;
-        background-color: @bgcBlack;
-        border: 2px solid @bgcBlack;
-        border-radius: 8px; 
-        margin-bottom: 16px; 
-    }
-    &__sansserif {
-        display: block;
-        width: 100px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        text-align: center;
-        margin-right: 2px;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        }
-    }
-    &__serif {
-        display: block;
-        font-family: Times New Roman, serif;
-        width: 120px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 16px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        text-align: center;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        }
-    }
+
+.palette {
+    background-color: initial; 
+    border: none; 
 }
-.block-line-height {
-    &__title {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 8px;
-    }
-    &__btn {
-        display: flex;
-        width: 274px;
-        height: 32px;
-        background-color: @bgcBlack;
-        border: 2px solid @bgcBlack;
-        border-radius: 8px; 
-        margin-bottom: 24px;
-    }
-    &__single {
-        display: block;
-        width: 92px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        margin-right: 2px;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        }
-    }
-    &__middle {
-        display: block;
-        width: 92px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        margin-right: 2px;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        }
-    }
-    &__double {
-        display: block;
-        width: 92px;
-        height: 32px;
-        padding: 2px 8px;
-        font-size: 14px;
-        color: @fontColorWhite;
-        background-color: @bgcBlack;
-        border-radius: 6px;
-        text-align: center;
-        &:active {
-            color: @fontColorBlack;
-            background-color: @bgcWhite;
-        }
-    }
+
+.font-size {
+    max-width: 13.45em;
 }
+
+.leter-spacing {
+    max-width: 17.15em;
+}
+.img {
+    max-width: 9.45em;
+}
+.font-type {
+    max-width: 12.9em;
+}
+.line-height {
+    max-width: 17.25em;
+}
+.active {
+    background-color: @bgcWhite;
+    color: @fontColorBlack;
+}
+
 .block-regularversion {
     text-align: right;
     margin-right: 24px;
+
     &__link {
         font-family: Roboto, sans-serif;
         font-size: 16px;
         color: @fontColorBlack;
+
         &:hover {
             color: @fontColorBlack
         }
+
         &:visited {
             color: @fontColorBlack;
         }
@@ -410,30 +265,36 @@ button {
     .block-container {
         padding-left: 26px;
     }
+
     .block-close {
         width: 24px;
         height: 24px;
         top: 32px;
+
         &__line {
             &:before {
                 width: 24px;
             }
+
             &:after {
                 width: 24px;
             }
         }
     }
+
     .block-palette {
         &__btn {
             margin-bottom: 24px;
         }
+
         &__standart {
-           width: 134px;
-           height: 36px;
-           font-size: 16px;
-           padding: 6px 16px;
-           margin-right: 16px;
+            width: 134px;
+            height: 36px;
+            font-size: 16px;
+            padding: 6px 16px;
+            margin-right: 16px;
         }
+
         &__inverse {
             width: 110px;
             height: 36px;
@@ -441,6 +302,7 @@ button {
             font-size: 16px;
             margin-right: 16px;
         }
+
         &__blue {
             width: 80px;
             height: 36px;
@@ -448,45 +310,53 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-size {
         &__btn {
             height: 40px;
             margin-bottom: 24px;
         }
+
         &__small {
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__medium {
             height: 40px;
             padding: 4px 16px;
             font-size: 24px;
         }
+
         &__large {
             height: 40px;
             padding: auto 16px;
             font-size: 32px;
         }
     }
+
     .block-letter-spacing {
         &__btn {
             width: 356px;
             height: 40px;
             margin-bottom: 24px;
         }
+
         &__small {
             width: 108px;
             height: 40px;
             padding: 6px 16px;
             font-size: 14px;
         }
+
         &__medium {
             width: 122px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__large {
             width: 122px;
             height: 40px;
@@ -494,18 +364,21 @@ button {
             font-size: 16px;
         }
     }
+
     .block-img {
         &__btn {
             width: 200px;
             height: 40px;
-            margin-bottom: 24px; 
+            margin-bottom: 24px;
         }
+
         &__show {
             width: 104px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__hide {
             width: 96px;
             height: 40px;
@@ -513,41 +386,48 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-type {
         &__btn {
             width: 260px;
             height: 40px;
-            margin-bottom: 24px; 
+            margin-bottom: 24px;
         }
+
         &__sansserif {
             width: 126px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__serif {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
         }
     }
+
     .block-line-height {
         &__btn {
             width: 354px;
             height: 40px;
         }
+
         &__single {
             width: 118px;
-            height:40px;
+            height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__middle {
             width: 118px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__double {
             width: 118px;
             height: 40px;
@@ -556,35 +436,42 @@ button {
         }
     }
 }
+
 @media (min-width: 640px) and (max-width: 1023px) {
     .block-container {
         padding-left: 80px;
     }
+
     .block-close {
         width: 24px;
         height: 24px;
         right: 40px;
         top: 44px;
+
         &__line {
             &:before {
                 width: 24px;
             }
+
             &:after {
                 width: 24px;
             }
         }
     }
+
     .block-palette {
         &__btn {
             margin-bottom: 24px;
         }
+
         &__standart {
-           width: 134px;
-           height: 36px;
-           font-size: 16px;
-           padding: 6px 16px;
-           margin-right: 16px;
+            width: 134px;
+            height: 36px;
+            font-size: 16px;
+            padding: 6px 16px;
+            margin-right: 16px;
         }
+
         &__inverse {
             width: 110px;
             height: 36px;
@@ -592,6 +479,7 @@ button {
             font-size: 16px;
             margin-right: 16px;
         }
+
         &__blue {
             width: 80px;
             height: 36px;
@@ -599,45 +487,53 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-size {
         &__btn {
             height: 40px;
             margin-bottom: 24px;
         }
+
         &__small {
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__medium {
             height: 40px;
             padding: 4px 16px;
             font-size: 24px;
         }
+
         &__large {
             height: 40px;
             padding: auto 16px;
             font-size: 32px;
         }
     }
+
     .block-letter-spacing {
         &__btn {
             width: 414px;
             height: 40px;
             margin-bottom: 24px;
         }
+
         &__small {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
             font-size: 14px;
         }
+
         &__medium {
             width: 140px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__large {
             width: 140px;
             height: 40px;
@@ -645,18 +541,21 @@ button {
             font-size: 16px;
         }
     }
+
     .block-img {
         &__btn {
             width: 200px;
             height: 40px;
-            margin-bottom: 24px; 
+            margin-bottom: 24px;
         }
+
         &__show {
             width: 104px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__hide {
             width: 96px;
             height: 40px;
@@ -664,41 +563,48 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-type {
         &__btn {
             width: 260px;
             height: 40px;
-            margin-bottom: 24px; 
+            margin-bottom: 24px;
         }
+
         &__sansserif {
             width: 126px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__serif {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
         }
     }
+
     .block-line-height {
         &__btn {
             width: 354px;
             height: 40px;
         }
+
         &__single {
             width: 118px;
-            height:40px;
+            height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__middle {
             width: 118px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__double {
             width: 118px;
             height: 40px;
@@ -706,10 +612,12 @@ button {
             font-size: 16px;
         }
     }
+
     .block-regularversion {
         margin-right: 40px;
     }
-} 
+}
+
 @media (min-width: 1024px) and (max-width: 1439px) {
     .block-container {
         display: flex;
@@ -717,33 +625,38 @@ button {
         width: 760px;
         padding-left: 80px;
     }
+
     .block-close {
         width: 24px;
         height: 24px;
         right: 40px;
         top: 52px;
+
         &__line {
             &:before {
                 width: 24px;
             }
+
             &:after {
                 width: 24px;
             }
         }
     }
-    
+
     .block-palette {
         &__btn {
             margin-bottom: 26px;
             margin-right: 64px;
         }
+
         &__standart {
-           width: 134px;
-           height: 36px;
-           font-size: 16px;
-           padding: 6px 16px;
-           margin-right: 16px;
+            width: 134px;
+            height: 36px;
+            font-size: 16px;
+            padding: 6px 16px;
+            margin-right: 16px;
         }
+
         &__inverse {
             width: 110px;
             height: 36px;
@@ -751,6 +664,7 @@ button {
             font-size: 16px;
             margin-right: 16px;
         }
+
         &__blue {
             width: 80px;
             height: 36px;
@@ -758,27 +672,32 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-size {
         &__btn {
             height: 40px;
             margin-bottom: 24px;
         }
+
         &__small {
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__medium {
             height: 40px;
             padding: 4px 16px;
             font-size: 24px;
         }
+
         &__large {
             height: 40px;
             padding: auto 16px;
             font-size: 32px;
         }
     }
+
     .block-letter-spacing {
         &__btn {
             width: 414px;
@@ -786,18 +705,21 @@ button {
             margin-bottom: 24px;
             margin-right: 64px;
         }
+
         &__small {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
             font-size: 14px;
         }
+
         &__medium {
             width: 140px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__large {
             width: 140px;
             height: 40px;
@@ -805,18 +727,21 @@ button {
             font-size: 16px;
         }
     }
+
     .block-img {
         &__btn {
             width: 200px;
             height: 40px;
-            margin-bottom: 24px; 
+            margin-bottom: 24px;
         }
+
         &__show {
             width: 104px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__hide {
             width: 96px;
             height: 40px;
@@ -824,42 +749,49 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-type {
         &__btn {
             width: 260px;
             height: 40px;
             margin-bottom: 24px;
-            margin-right: 64px; 
+            margin-right: 64px;
         }
+
         &__sansserif {
             width: 126px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__serif {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
         }
     }
+
     .block-line-height {
         &__btn {
             width: 354px;
             height: 40px;
         }
+
         &__single {
             width: 118px;
-            height:40px;
+            height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__middle {
             width: 118px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__double {
             width: 118px;
             height: 40px;
@@ -867,13 +799,15 @@ button {
             font-size: 16px;
         }
     }
-    .block-regularversion {        
+
+    .block-regularversion {
         position: absolute;
         margin-right: initial;
         top: 340px;
         right: 40px;
     }
 }
+
 @media (min-width: 1440px) {
     .block-container {
         display: grid;
@@ -886,34 +820,39 @@ button {
         margin-right: auto;
         padding-left: 80px;
     }
+
     .block-close {
         width: 24px;
         height: 24px;
         left: initial;
         right: 40px;
         top: 52px;
+
         &__line {
             &:before {
                 width: 24px;
             }
+
             &:after {
                 width: 24px;
             }
         }
     }
-    
+
     .block-palette {
         &__btn {
             margin-bottom: 26px;
             margin-right: 64px;
         }
+
         &__standart {
-           width: 134px;
-           height: 36px;
-           font-size: 16px;
-           padding: 6px 16px;
-           margin-right: 16px;
+            width: 134px;
+            height: 36px;
+            font-size: 16px;
+            padding: 6px 16px;
+            margin-right: 16px;
         }
+
         &__inverse {
             width: 110px;
             height: 36px;
@@ -921,6 +860,7 @@ button {
             font-size: 16px;
             margin-right: 16px;
         }
+
         &__blue {
             width: 80px;
             height: 36px;
@@ -928,27 +868,32 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-size {
         &__btn {
             height: 40px;
             margin-bottom: 24px;
         }
+
         &__small {
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__medium {
             height: 40px;
             padding: 4px 16px;
             font-size: 24px;
         }
+
         &__large {
             height: 40px;
             padding: auto 16px;
             font-size: 32px;
         }
     }
+
     .block-letter-spacing {
         &__btn {
             width: 414px;
@@ -956,18 +901,21 @@ button {
             margin-bottom: 24px;
             margin-right: 64px;
         }
+
         &__small {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
             font-size: 14px;
         }
+
         &__medium {
             width: 140px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__large {
             width: 140px;
             height: 40px;
@@ -975,18 +923,21 @@ button {
             font-size: 16px;
         }
     }
+
     .block-img {
         &__btn {
             width: 200px;
             height: 40px;
-            margin-bottom: 24px; 
+            margin-bottom: 24px;
         }
+
         &__show {
             width: 104px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__hide {
             width: 96px;
             height: 40px;
@@ -994,42 +945,49 @@ button {
             font-size: 16px;
         }
     }
+
     .block-font-type {
         &__btn {
             width: 260px;
             height: 40px;
             margin-bottom: 24px;
-            margin-right: 64px; 
+            margin-right: 64px;
         }
+
         &__sansserif {
             width: 126px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__serif {
             width: 134px;
             height: 40px;
             padding: 6px 16px;
         }
     }
+
     .block-line-height {
         &__btn {
             width: 354px;
             height: 40px;
         }
+
         &__single {
             width: 118px;
-            height:40px;
+            height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__middle {
             width: 118px;
             height: 40px;
             padding: 6px 16px;
             font-size: 16px;
         }
+
         &__double {
             width: 118px;
             height: 40px;
@@ -1037,7 +995,8 @@ button {
             font-size: 16px;
         }
     }
-    .block-regularversion {        
+
+    .block-regularversion {
         position: absolute;
         top: 240px;
         right: 40px;

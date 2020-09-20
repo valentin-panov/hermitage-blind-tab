@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-font-size='medium'>
+<!-- атрибут - тестовое значение -->
 
 <head>
 	<meta charset="UTF-8">
@@ -11,52 +12,52 @@
 <body>
 	<div class="block-container">
 		<div class="block-close">
-			<div class="block-close__line"></div>			
+			<div class="block-close__line"></div>
 		</div>
-		<div class="block-palette">
-			<div class="block-palette__title">Палитра сайта</div>
-			<div class="block-palette__btn">
-				<button class="block-palette__standart">Стандартная</button>
-				<button class="block-palette__inverse">Инверсия</button>
-				<button class="block-palette__blue">Синяя</button>
+		<div class="block">
+			<div class="block-name title">Палитра сайта</div>
+			<div class="block__element palette">
+				<button class="block__element_mode block__element_mode_standart">Стандартная</button>
+				<button class="block__element_mode block__element_mode_inverse">Инверсия</button>
+				<button class="block__element_mode block__element_mode_blue">Синяя</button>
 			</div>
 		</div>
-		<div class="block-font-size">
-			<div class="block-font-size__title">Размер шрифта</div>
-			<div class="block-font-size__btn">
-				<button class="block-font-size__small">A</button>
-				<button class="block-font-size__medium">A</button>
-				<button class="block-font-size__large">A</button>
+		<div class="block">
+			<div class="block-name title">Размер шрифта</div>
+			<div class="block__element font-size">
+				<button class="block__element_mode_small active">A</button>
+				<button class="block__element_mode_medium active">A</button>
+				<button class="block__element_mode_large active">A</button>
 			</div>
 		</div>
-		<div class="block-letter-spacing">
-			<div class="block-letter-spacing__title">Межбуквенный интервал</div>
-			<div class="block-letter-spacing__btn">
-				<button class="block-letter-spacing__small">Стандарт.</button>
-				<button class="block-letter-spacing__medium">Увеличен.</button>
-				<button class="block-letter-spacing__large">Большой</button>
+		<div class="block">
+			<div class="block-name title">Межбуквенный интервал</div>
+			<div class="block__element leter-spacing">
+				<button class="block__element_mode_normal active">Стандарт.</button>
+				<button class="block__element_mode_middle active">Увеличен.</button>
+				<button class="block__element_mode_big active">Большой</button>
 			</div>
 		</div>
-		<div class="block-img">
-			<div class="block-img__title">Изображение</div>
-			<div class="block-img__btn">
-				<button class="block-img__show">Показать</button>
-				<button class="block-img__hide">Скрыть</button>
-			</div>
-		</div>		
-		<div class="block-font-type">
-			<div class="block-font-type__title">Шрифт</div>
-			<div class="block-font-type__btn">
-				<button class="block-font-type__sansserif">Без засечек</button>
-				<button class="block-font-type__serif">С засечками</button>
+		<div class="block">
+			<div class="block-name title">Изображение</div>
+			<div class="block__element img">
+				<button class="block__element_mode_show active">Показать</button>
+				<button class="block__element_mode_hide active">Скрыть</button>
 			</div>
 		</div>
-		<div class="block-line-height">
-			<div class="block-line-height__title">Межстрочный интервал</div>
-			<div class="block-line-height__btn">
-				<button class="block-line-height__single">Одинарный</button>
-				<button class="block-line-height__middle">Полуторный</button>
-				<button class="block-line-height__double">Двойной</button>
+		<div class="block">
+			<div class="block-name title">Шрифт</div>
+			<div class="block__element font-type">
+				<button class="block__element_mode_sansserif active">Без засечек</button>
+				<button class="block__element_mode_serif active">С засечками</button>
+			</div>
+		</div>
+		<div class="block">
+			<div class="block-name title">Межстрочный интервал</div>
+			<div class="block__element line-height">
+				<button class="block__element_mode_single active">Одинарный</button>
+				<button class="block__element_mode_mid active">Полуторный</button>
+				<button class="block__element_mode_double active">Двойной</button>
 			</div>
 		</div>
 		<div class="block-regularversion">

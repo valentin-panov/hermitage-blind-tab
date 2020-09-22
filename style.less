@@ -6,7 +6,7 @@
 @backgroundBlue: lightskyblue;
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     min-width: 320px;
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ button {
     margin: 0;
     padding: 0;
     border: none;
-    font: inherit;
+    font-family: Arial, Helvetica, sans-serif;
     color: inherit;
     background-color: transparent;
     cursor: pointer;
@@ -64,7 +64,7 @@ html[data-font-size='large'] {
         &:before {
             content: '';
             position: absolute;
-            width: 16px;
+            width: 22px;
             height: 2px;
             left: 0;
             top: 0;
@@ -75,7 +75,7 @@ html[data-font-size='large'] {
         &:after {
             content: '';
             position: absolute;
-            width: 16px;
+            width: 22px;
             height: 2px;
             left: 0;
             top: 0;
@@ -91,7 +91,7 @@ html[data-font-size='large'] {
     }
 
     &__element {
-        display: flex;
+        display: inline-flex;
         height: 2.125em;
         margin-bottom: 1em;
         background-color: @bgcBlack;
@@ -101,14 +101,12 @@ html[data-font-size='large'] {
         box-sizing: border-box;
     }
     &__element_mode {
-        display: block;
         box-sizing: border-box;
         border: 0.125em solid @bgcBlack;
         border-radius: 0.5em;
         font-size: 1em;
         padding: 0.25em 0.5em;
         margin-right: 0.5em;
-
         &_standart {
             color: @fontColorBlack;
             background-color: @bgcWhite;
@@ -128,27 +126,27 @@ html[data-font-size='large'] {
         &_small {
             padding: 0.125em 1.5em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
         }
 
         &_medium {
             padding: 0.125em 1.5em;
             font-size: 1.25em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
         }
 
         &_large {
             padding: 0.05em 1.4em;
             font-size: 1.5em;
-            border-radius: 0.375em;
+            border-radius: 6px;
         }
 
         &_normal {
             padding: 0.125em 0.5em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
         }
 
@@ -156,7 +154,7 @@ html[data-font-size='large'] {
             padding: 0.125em 0.5em;
             font-size: 0.875em;
             letter-spacing: 0.1em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
         }
 
@@ -164,50 +162,49 @@ html[data-font-size='large'] {
             padding: 0.125em 0.5em;
             font-size: 0.875em;
             letter-spacing: 0.2em;
-            border-radius: 0.375em;
+            border-radius: 6px;
         }
         &_show {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
         }
         &_hide {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
         }
         &_sansserif {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
         }
         &_serif {
             font-family: Times New Roman, serif;
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
         }
         &_single {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
 
         }
         &_mid {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
+            border-radius: 6px;
             margin-right: 2px;
 
         }
         &_double {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
-            border-radius: 0.375em;
-
+            border-radius: 6px;
         }
     }
 }
@@ -220,23 +217,6 @@ html[data-font-size='large'] {
     background-color: initial; 
     border: none; 
 }
-
-.font-size {
-    max-width: 13.45em;
-}
-
-.leter-spacing {
-    max-width: 17.15em;
-}
-.img {
-    max-width: 9.45em;
-}
-.font-type {
-    max-width: 12.9em;
-}
-.line-height {
-    max-width: 17.25em;
-}
 .active {
     background-color: @bgcWhite;
     color: @fontColorBlack;
@@ -244,11 +224,11 @@ html[data-font-size='large'] {
 
 .block-regularversion {
     text-align: right;
-    margin-right: 24px;
+    margin-right: 1.5em;
 
     &__link {
         font-family: Roboto, sans-serif;
-        font-size: 16px;
+        font-size: 1em;
         color: @fontColorBlack;
 
         &:hover {
@@ -263,359 +243,212 @@ html[data-font-size='large'] {
 
 @media (min-width: 400px) and (max-width: 639px) {
     .block-container {
-        padding-left: 26px;
+        padding-left: 1.625em;
     }
 
     .block-close {
         width: 24px;
         height: 24px;
+        right: 1.5em;
         top: 32px;
 
         &__line {
             &:before {
-                width: 24px;
+                width: 33px;
             }
 
             &:after {
-                width: 24px;
+                width: 33px;
             }
         }
     }
 
-    .block-palette {
-        &__btn {
-            margin-bottom: 24px;
+    .block {
+        &-name {
+            font-size: 1em;
         }
-
-        &__standart {
-            width: 134px;
-            height: 36px;
-            font-size: 16px;
-            padding: 6px 16px;
-            margin-right: 16px;
+    
+        &__element {
+            height: 2.375em;
+            margin-bottom: 1.625em;
         }
-
-        &__inverse {
-            width: 110px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-            margin-right: 16px;
-        }
-
-        &__blue {
-            width: 80px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
-    .block-font-size {
-        &__btn {
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__small {
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__medium {
-            height: 40px;
-            padding: 4px 16px;
-            font-size: 24px;
-        }
-
-        &__large {
-            height: 40px;
-            padding: auto 16px;
-            font-size: 32px;
-        }
-    }
-
-    .block-letter-spacing {
-        &__btn {
-            width: 356px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__small {
-            width: 108px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 14px;
-        }
-
-        &__medium {
-            width: 122px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__large {
-            width: 122px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
+        &__element_mode {
+            padding: 0.375em 1em;
+            margin-right: 1em;
+            &_small {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+    
+            &_medium {
+                padding: 0.125em 1em;
+                font-size: 1.5em;
+            }
+    
+            &_large {
+                padding: 0 1em;
+                font-size: 2em;
+            }
+    
+            &_normal {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+    
+            &_middle {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.1em;
+            }
+    
+            &_big {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.2em;
+            }
+            &_show {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_hide {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_sansserif {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_serif {
+                font-family: Times New Roman, serif;
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_single {
+                padding: 0.375em 1em;
+                font-size: 1em;
+    
+            }
+            &_mid {
+                padding: 0.375em 1em;
+                font-size: 1em;
+    
+            }
+            &_double {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
         }
     }
-
-    .block-img {
-        &__btn {
-            width: 200px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__show {
-            width: 104px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__hide {
-            width: 96px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
+    .block-regularversion {
+        text-align: right;
+        margin-right: 1.5em;
     }
 
-    .block-font-type {
-        &__btn {
-            width: 260px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__sansserif {
-            width: 126px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__serif {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-        }
-    }
-
-    .block-line-height {
-        &__btn {
-            width: 354px;
-            height: 40px;
-        }
-
-        &__single {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__middle {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__double {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
     .block-container {
-        padding-left: 80px;
+        padding-left: 5em;
     }
 
     .block-close {
         width: 24px;
         height: 24px;
-        right: 40px;
-        top: 44px;
+        right: 2.5em;
+        top: 32px;
 
         &__line {
             &:before {
-                width: 24px;
+                width: 33px;
             }
 
             &:after {
-                width: 24px;
+                width: 33px;
             }
         }
     }
 
-    .block-palette {
-        &__btn {
-            margin-bottom: 24px;
+    .block {
+        &-name {
+            font-size: 1em;
         }
-
-        &__standart {
-            width: 134px;
-            height: 36px;
-            font-size: 16px;
-            padding: 6px 16px;
-            margin-right: 16px;
+    
+        &__element {
+            height: 2.375em;
+            margin-bottom: 1.625em;
         }
-
-        &__inverse {
-            width: 110px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-            margin-right: 16px;
-        }
-
-        &__blue {
-            width: 80px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
-    .block-font-size {
-        &__btn {
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__small {
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__medium {
-            height: 40px;
-            padding: 4px 16px;
-            font-size: 24px;
-        }
-
-        &__large {
-            height: 40px;
-            padding: auto 16px;
-            font-size: 32px;
-        }
-    }
-
-    .block-letter-spacing {
-        &__btn {
-            width: 414px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__small {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 14px;
-        }
-
-        &__medium {
-            width: 140px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__large {
-            width: 140px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
+        &__element_mode {
+            padding: 0.375em 1em;
+            margin-right: 1em;
+            &_small {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+    
+            &_medium {
+                padding: 0.125em 1em;
+                font-size: 1.5em;
+            }
+    
+            &_large {
+                padding: 0 1em;
+                font-size: 2em;
+            }
+    
+            &_normal {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+    
+            &_middle {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.1em;
+            }
+    
+            &_big {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.2em;
+            }
+            &_show {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_hide {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_sansserif {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_serif {
+                font-family: Times New Roman, serif;
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_single {
+                padding: 0.375em 1em;
+                font-size: 1em;
+    
+            }
+            &_mid {
+                padding: 0.375em 1em;
+                font-size: 1em;
+    
+            }
+            &_double {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
         }
     }
-
-    .block-img {
-        &__btn {
-            width: 200px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__show {
-            width: 104px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__hide {
-            width: 96px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
-    .block-font-type {
-        &__btn {
-            width: 260px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__sansserif {
-            width: 126px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__serif {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-        }
-    }
-
-    .block-line-height {
-        &__btn {
-            width: 354px;
-            height: 40px;
-        }
-
-        &__single {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__middle {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__double {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
     .block-regularversion {
-        margin-right: 40px;
+        text-align: right;
+        margin-right: 2.5em;
     }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -625,186 +458,110 @@ html[data-font-size='large'] {
         width: 760px;
         padding-left: 80px;
     }
-
     .block-close {
         width: 24px;
         height: 24px;
-        right: 40px;
-        top: 52px;
+        right: 2.5em;
+        top: 32px;
 
         &__line {
             &:before {
-                width: 24px;
+                width: 33px;
             }
 
             &:after {
-                width: 24px;
+                width: 33px;
             }
         }
     }
 
-    .block-palette {
-        &__btn {
-            margin-bottom: 26px;
-            margin-right: 64px;
+    .block {
+        &:nth-child(4) {
+            margin-right: 4em;
         }
-
-        &__standart {
-            width: 134px;
-            height: 36px;
-            font-size: 16px;
-            padding: 6px 16px;
-            margin-right: 16px;
+        &:nth-child(6) {
+            margin-right: 4em;
         }
-
-        &__inverse {
-            width: 110px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-            margin-right: 16px;
+        &-name {
+            font-size: 1em;
         }
-
-        &__blue {
-            width: 80px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
+    
+        &__element {
+            height: 2.375em;
+            margin-bottom: 1.625em;
         }
-    }
-
-    .block-font-size {
-        &__btn {
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__small {
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__medium {
-            height: 40px;
-            padding: 4px 16px;
-            font-size: 24px;
-        }
-
-        &__large {
-            height: 40px;
-            padding: auto 16px;
-            font-size: 32px;
-        }
-    }
-
-    .block-letter-spacing {
-        &__btn {
-            width: 414px;
-            height: 40px;
-            margin-bottom: 24px;
-            margin-right: 64px;
-        }
-
-        &__small {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 14px;
-        }
-
-        &__medium {
-            width: 140px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__large {
-            width: 140px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
-    .block-img {
-        &__btn {
-            width: 200px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
-
-        &__show {
-            width: 104px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__hide {
-            width: 96px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
+        &__element_mode {
+            padding: 0.375em 1em;
+            margin-right: 1em;
+            &_blue {
+                margin-right: 4em;
+            }
+            &_small {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+    
+            &_medium {
+                padding: 0.125em 1em;
+                font-size: 1.5em;
+            }
+    
+            &_large {
+                padding: 0 1em;
+                font-size: 2em;
+            }
+    
+            &_normal {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+    
+            &_middle {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.1em;
+            }
+            &_big {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.2em;
+            }
+            &_show {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_hide {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_sansserif {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_serif {
+                font-family: Times New Roman, serif;
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+            &_single {
+                padding: 0.375em 1em;
+                font-size: 1em;
+    
+            }
+            &_mid {
+                padding: 0.375em 1em;
+                font-size: 1em;
+    
+            }
+            &_double {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
         }
     }
-
-    .block-font-type {
-        &__btn {
-            width: 260px;
-            height: 40px;
-            margin-bottom: 24px;
-            margin-right: 64px;
-        }
-
-        &__sansserif {
-            width: 126px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__serif {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-        }
-    }
-
-    .block-line-height {
-        &__btn {
-            width: 354px;
-            height: 40px;
-        }
-
-        &__single {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__middle {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__double {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
     .block-regularversion {
-        position: absolute;
-        margin-right: initial;
-        top: 340px;
-        right: 40px;
+        text-align: right;
+        margin-right: 2.5em;
     }
 }
 

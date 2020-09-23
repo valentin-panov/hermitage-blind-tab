@@ -14,9 +14,6 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-button:focus {
-  -moz-outline-radius: 6px;
-}
 html[data-font-size='small'] {
   font-size: small;
 }
@@ -25,10 +22,6 @@ html[data-font-size='medium'] {
 }
 html[data-font-size='large'] {
   font-size: large;
-}
-.active {
-  background-color: white;
-  color: black;
 }
 .block-container {
   max-width: 1600px;
@@ -91,14 +84,17 @@ html[data-font-size='large'] {
   color: black;
   background-color: white;
 }
+.block__element_mode_standart:before {
+  content: attr(data-text-palette-standart);
+}
 .block__element_mode_inverse {
   background-color: #272423;
   color: white;
 }
 .block__element_mode_blue {
-  background-color: lightskyblue;
+  background-color: #a8d1fb;
   color: midnightblue;
-  border: 0.125em solid lightskyblue;
+  border: 0.125em solid #a8d1fb;
 }
 .block__element_mode_small {
   padding: 0.125em 1.5em;
@@ -123,12 +119,18 @@ html[data-font-size='large'] {
   border-radius: 6px;
   margin-right: 2px;
 }
+.block__element_mode_normal:before {
+  content: attr(data-text-ltr-spacing-standart);
+}
 .block__element_mode_middle {
   padding: 0.125em 0.5em;
   font-size: 0.875em;
   letter-spacing: 0.1em;
   border-radius: 6px;
   margin-right: 2px;
+}
+.block__element_mode_middle:before {
+  content: attr(data-text-ltr-spacing-middle);
 }
 .block__element_mode_big {
   padding: 0.125em 0.5em;
@@ -201,6 +203,37 @@ html[data-font-size='large'] {
 }
 .block-regularversion__link:visited {
   color: black;
+}
+.invert {
+  background-color: #272423;
+}
+.invert-active {
+  background-color: #272423;
+  color: white;
+  border: 0.125em solid white;
+}
+.invert-title {
+  color: white;
+}
+.invert-element {
+  background-color: white;
+  color: black;
+}
+.invert-blue {
+  background-color: #a8d1fb;
+}
+.invert-blue-active {
+  background-color: #a8d1fb;
+  color: midnightblue;
+  border: 0.125em solid midnightblue;
+}
+.invert-blue-title {
+  color: #183762;
+}
+.invert-blue-element {
+  background-color: #183762;
+  color: white;
+  border: 0.125em solid #183762;
 }
 @media (min-width: 400px) and (max-width: 639px) {
   .block-container {

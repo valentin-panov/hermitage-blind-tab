@@ -3,7 +3,8 @@
 @fontColorBlack: black;
 @fontColorWhite: white;
 @fontColorBlue: midnightblue;
-@backgroundBlue: lightskyblue;
+@backgroundBlue: #a8d1fb;
+@bgcInvertBlue: #183762;
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -21,10 +22,6 @@ button {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-
-    &:focus {
-        -moz-outline-radius: 6px;
-    }
 }
 
 html[data-font-size='small'] {
@@ -37,11 +34,6 @@ html[data-font-size='medium'] {
 
 html[data-font-size='large'] {
     font-size: large;
-}
-
-.active {
-    background-color: @bgcWhite;
-    color: @fontColorBlack;
 }
 
 .block-container {
@@ -100,6 +92,7 @@ html[data-font-size='large'] {
         border-radius: 0.5em;
         box-sizing: border-box;
     }
+
     &__element_mode {
         box-sizing: border-box;
         border: 0.125em solid @bgcBlack;
@@ -107,9 +100,14 @@ html[data-font-size='large'] {
         font-size: 1em;
         padding: 0.25em 0.5em;
         margin-right: 0.5em;
+
         &_standart {
             color: @fontColorBlack;
             background-color: @bgcWhite;
+
+            &:before {
+                content: attr(data-text-palette-standart);
+            }
         }
 
         &_inverse {
@@ -148,6 +146,10 @@ html[data-font-size='large'] {
             font-size: 0.875em;
             border-radius: 6px;
             margin-right: 2px;
+
+            &:before {
+                content: attr(data-text-ltr-spacing-standart);
+            }
         }
 
         &_middle {
@@ -156,6 +158,10 @@ html[data-font-size='large'] {
             letter-spacing: 0.1em;
             border-radius: 6px;
             margin-right: 2px;
+
+            &:before {
+                content: attr(data-text-ltr-spacing-middle);
+            }
         }
 
         &_big {
@@ -164,29 +170,34 @@ html[data-font-size='large'] {
             letter-spacing: 0.2em;
             border-radius: 6px;
         }
+
         &_show {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
             border-radius: 6px;
             margin-right: 2px;
         }
+
         &_hide {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
             border-radius: 6px;
         }
+
         &_sansserif {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
             border-radius: 6px;
             margin-right: 2px;
         }
+
         &_serif {
             font-family: Times New Roman, serif;
             padding: 0.125em 0.6em;
             font-size: 0.875em;
             border-radius: 6px;
         }
+
         &_single {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
@@ -194,6 +205,7 @@ html[data-font-size='large'] {
             margin-right: 2px;
 
         }
+
         &_mid {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
@@ -201,6 +213,7 @@ html[data-font-size='large'] {
             margin-right: 2px;
 
         }
+
         &_double {
             padding: 0.125em 0.6em;
             font-size: 0.875em;
@@ -214,9 +227,10 @@ html[data-font-size='large'] {
 }
 
 .palette {
-    background-color: initial; 
-    border: none; 
+    background-color: initial;
+    border: none;
 }
+
 .active {
     background-color: @bgcWhite;
     color: @fontColorBlack;
@@ -241,6 +255,51 @@ html[data-font-size='large'] {
     }
 }
 
+//============ классы для режима инверсии
+
+.invert {
+    background-color: @bgcBlack;
+}
+
+.invert-active {
+    background-color: @bgcBlack;
+    color: @fontColorWhite;
+    border: 0.125em solid @bgcWhite;
+}
+
+.invert-title {
+    color: @fontColorWhite;
+}
+
+.invert-element {
+    background-color: @bgcWhite;
+    color: @fontColorBlack;
+}
+
+//==================================
+//============ классы для режима blue
+.invert-blue {
+    background-color: @backgroundBlue;
+}
+
+.invert-blue-active {
+    background-color: @backgroundBlue;
+    color: @fontColorBlue;
+    border: 0.125em solid @fontColorBlue;
+}
+
+.invert-blue-title {
+    color: @bgcInvertBlue;
+}
+
+.invert-blue-element {
+    background-color: @bgcInvertBlue;
+    color: @fontColorWhite;
+    border: 0.125em solid @bgcInvertBlue;
+}
+//==================================
+
+//медиа
 @media (min-width: 400px) and (max-width: 639px) {
     .block-container {
         padding-left: 1.625em;
@@ -267,78 +326,88 @@ html[data-font-size='large'] {
         &-name {
             font-size: 1em;
         }
-    
+
         &__element {
             height: 2.375em;
             margin-bottom: 1.625em;
         }
+
         &__element_mode {
             padding: 0.375em 1em;
             margin-right: 1em;
+
             &_small {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
-    
+
             &_medium {
                 padding: 0.125em 1em;
                 font-size: 1.5em;
             }
-    
+
             &_large {
                 padding: 0 1em;
                 font-size: 2em;
             }
-    
+
             &_normal {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
-    
+
             &_middle {
                 padding: 0.375em 1em;
                 font-size: 1em;
                 letter-spacing: 0.1em;
             }
-    
+
             &_big {
                 padding: 0.375em 1em;
                 font-size: 1em;
                 letter-spacing: 0.2em;
             }
+
             &_show {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_hide {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_sansserif {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_serif {
                 font-family: Times New Roman, serif;
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_single {
                 padding: 0.375em 1em;
                 font-size: 1em;
-    
+
             }
+
             &_mid {
                 padding: 0.375em 1em;
                 font-size: 1em;
-    
+
             }
+
             &_double {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
         }
     }
+
     .block-regularversion {
         text-align: right;
         margin-right: 1.5em;
@@ -372,78 +441,88 @@ html[data-font-size='large'] {
         &-name {
             font-size: 1em;
         }
-    
+
         &__element {
             height: 2.375em;
             margin-bottom: 1.625em;
         }
+
         &__element_mode {
             padding: 0.375em 1em;
             margin-right: 1em;
+
             &_small {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
-    
+
             &_medium {
                 padding: 0.125em 1em;
                 font-size: 1.5em;
             }
-    
+
             &_large {
                 padding: 0 1em;
                 font-size: 2em;
             }
-    
+
             &_normal {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
-    
+
             &_middle {
                 padding: 0.375em 1em;
                 font-size: 1em;
                 letter-spacing: 0.1em;
             }
-    
+
             &_big {
                 padding: 0.375em 1em;
                 font-size: 1em;
                 letter-spacing: 0.2em;
             }
+
             &_show {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_hide {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_sansserif {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_serif {
                 font-family: Times New Roman, serif;
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_single {
                 padding: 0.375em 1em;
                 font-size: 1em;
-    
+
             }
+
             &_mid {
                 padding: 0.375em 1em;
                 font-size: 1em;
-    
+
             }
+
             &_double {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
         }
     }
+
     .block-regularversion {
         text-align: right;
         margin-right: 2.5em;
@@ -458,6 +537,7 @@ html[data-font-size='large'] {
         width: 760px;
         padding-left: 80px;
     }
+
     .block-close {
         width: 24px;
         height: 24px;
@@ -479,86 +559,100 @@ html[data-font-size='large'] {
         &:nth-child(4) {
             margin-right: 4em;
         }
+
         &:nth-child(6) {
             margin-right: 4em;
         }
+
         &-name {
             font-size: 1em;
         }
-    
+
         &__element {
             height: 2.375em;
             margin-bottom: 1.625em;
         }
+
         &__element_mode {
             padding: 0.375em 1em;
             margin-right: 1em;
+
             &_blue {
                 margin-right: 4em;
             }
+
             &_small {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
-    
+
             &_medium {
                 padding: 0.125em 1em;
                 font-size: 1.5em;
             }
-    
+
             &_large {
                 padding: 0 1em;
                 font-size: 2em;
             }
-    
+
             &_normal {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
-    
+
             &_middle {
                 padding: 0.375em 1em;
                 font-size: 1em;
                 letter-spacing: 0.1em;
             }
+
             &_big {
                 padding: 0.375em 1em;
                 font-size: 1em;
                 letter-spacing: 0.2em;
             }
+
             &_show {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_hide {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_sansserif {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_serif {
                 font-family: Times New Roman, serif;
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
+
             &_single {
                 padding: 0.375em 1em;
                 font-size: 1em;
-    
+
             }
+
             &_mid {
                 padding: 0.375em 1em;
                 font-size: 1em;
-    
+
             }
+
             &_double {
                 padding: 0.375em 1em;
                 font-size: 1em;
             }
         }
     }
+
     .block-regularversion {
         text-align: right;
         margin-right: 2.5em;
@@ -760,3 +854,4 @@ html[data-font-size='large'] {
         margin-right: initial;
     }
 }
+//медиа

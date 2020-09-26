@@ -13,7 +13,9 @@ body {
     padding: 0;
     background-color: @bgcWhite;
 }
-
+a {
+    text-decoration: none;
+}
 button {
     margin: 0;
     padding: 0;
@@ -239,18 +241,19 @@ html[data-font-size='large'] {
 .block-regularversion {
     text-align: right;
     margin-right: 1.5em;
-
     &__link {
         font-family: Roboto, sans-serif;
         font-size: 1em;
         color: @fontColorBlack;
 
         &:hover {
-            color: @fontColorBlack
+            color: @fontColorBlack;            
+            text-decoration: underline;
+            
         }
 
         &:visited {
-            color: @fontColorBlack;
+            color: @bgcInvertBlue;
         }
     }
 }
@@ -663,190 +666,129 @@ html[data-font-size='large'] {
     .block-container {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 354px 264px 416px;
-        grid-column-gap: 66px;
+        grid-template-columns: 360px 310px 410px;
+        grid-column-gap: 65px;
         width: 1440px;
         box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
         padding-left: 80px;
+        box-sizing: border-box;
     }
-
     .block-close {
         width: 24px;
         height: 24px;
-        left: initial;
-        right: 40px;
-        top: 52px;
+        right: 2.5em;
+        top: 32px;
 
         &__line {
             &:before {
-                width: 24px;
+                width: 33px;
             }
 
             &:after {
-                width: 24px;
+                width: 33px;
             }
         }
     }
 
-    .block-palette {
-        &__btn {
-            margin-bottom: 26px;
-            margin-right: 64px;
+    .block {
+        &:nth-child(4) {
+            margin-right: 4em;
         }
 
-        &__standart {
-            width: 134px;
-            height: 36px;
-            font-size: 16px;
-            padding: 6px 16px;
-            margin-right: 16px;
+        &:nth-child(6) {
+            margin-right: 4em;
         }
 
-        &__inverse {
-            width: 110px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-            margin-right: 16px;
+        &-name {
+            font-size: 1em;
         }
 
-        &__blue {
-            width: 80px;
-            height: 36px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
-    .block-font-size {
-        &__btn {
-            height: 40px;
-            margin-bottom: 24px;
+        &__element {
+            height: 2.375em;
+            margin-bottom: 1.625em;
         }
 
-        &__small {
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
+        &__element_mode {
+            padding: 0.375em 1em;
+            margin-right: 1em;
 
-        &__medium {
-            height: 40px;
-            padding: 4px 16px;
-            font-size: 24px;
-        }
+            &_blue {
+                margin-right: 4em;
+            }
 
-        &__large {
-            height: 40px;
-            padding: auto 16px;
-            font-size: 32px;
-        }
-    }
+            &_small {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
 
-    .block-letter-spacing {
-        &__btn {
-            width: 414px;
-            height: 40px;
-            margin-bottom: 24px;
-            margin-right: 64px;
-        }
+            &_medium {
+                padding: 0.125em 1em;
+                font-size: 1.5em;
+            }
 
-        &__small {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 14px;
-        }
+            &_large {
+                padding: 0 1em;
+                font-size: 2em;
+            }
 
-        &__medium {
-            width: 140px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
+            &_normal {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
 
-        &__large {
-            width: 140px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
+            &_middle {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.1em;
+            }
 
-    .block-img {
-        &__btn {
-            width: 200px;
-            height: 40px;
-            margin-bottom: 24px;
-        }
+            &_big {
+                padding: 0.375em 1em;
+                font-size: 1em;
+                letter-spacing: 0.2em;
+            }
 
-        &__show {
-            width: 104px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
+            &_show {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
 
-        &__hide {
-            width: 96px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
+            &_hide {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+
+            &_sansserif {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+
+            &_serif {
+                font-family: Times New Roman, serif;
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
+
+            &_single {
+                padding: 0.375em 1em;
+                font-size: 1em;
+
+            }
+
+            &_mid {
+                padding: 0.375em 1em;
+                font-size: 1em;
+
+            }
+
+            &_double {
+                padding: 0.375em 1em;
+                font-size: 1em;
+            }
         }
     }
-
-    .block-font-type {
-        &__btn {
-            width: 260px;
-            height: 40px;
-            margin-bottom: 24px;
-            margin-right: 64px;
-        }
-
-        &__sansserif {
-            width: 126px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__serif {
-            width: 134px;
-            height: 40px;
-            padding: 6px 16px;
-        }
-    }
-
-    .block-line-height {
-        &__btn {
-            width: 354px;
-            height: 40px;
-        }
-
-        &__single {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__middle {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-
-        &__double {
-            width: 118px;
-            height: 40px;
-            padding: 6px 16px;
-            font-size: 16px;
-        }
-    }
-
     .block-regularversion {
         position: absolute;
         top: 240px;

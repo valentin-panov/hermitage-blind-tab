@@ -263,13 +263,6 @@ html[data-font-size='large'] {
 .invert {
     background-color: @bgcBlack;
 }
-
-.invert-active {
-    background-color: @bgcBlack;
-    color: @fontColorWhite;
-    border: 0.125em solid @bgcWhite;
-}
-
 .invert-title {
     color: @fontColorWhite;
 }
@@ -278,17 +271,16 @@ html[data-font-size='large'] {
     background-color: @bgcWhite;
     color: @fontColorBlack;
 }
+.invert-active {
+    background-color: @bgcBlack;
+    color: @fontColorWhite;
+    border: 0.125em solid @bgcWhite;
+}
 
 //==================================
 //============ классы для режима blue
 .invert-blue {
     background-color: @backgroundBlue;
-}
-
-.invert-blue-active {
-    background-color: @backgroundBlue;
-    color: @fontColorBlue;
-    border: 0.125em solid @fontColorBlue;
 }
 
 .invert-blue-title {
@@ -299,6 +291,11 @@ html[data-font-size='large'] {
     background-color: @bgcInvertBlue;
     color: @fontColorWhite;
     border: 0.125em solid @bgcInvertBlue;
+}
+.invert-blue-active {
+    background-color: @backgroundBlue;
+    color: @fontColorBlue;
+    border: 0.125em solid @fontColorBlue;
 }
 //==================================
 
@@ -666,7 +663,7 @@ html[data-font-size='large'] {
     .block-container {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 360px 310px 410px;
+        grid-template-columns: 360px 315px 410px;
         grid-column-gap: 65px;
         width: 1440px;
         box-sizing: border-box;

@@ -16,3 +16,5 @@ tmp/
 *.txt
 
 .vscode/
+dist/
+scripts/dist/

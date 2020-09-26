@@ -211,11 +211,6 @@ html[data-font-size='large'] {
 .invert {
   background-color: #272423;
 }
-.invert-active {
-  background-color: #272423;
-  color: white;
-  border: 0.125em solid white;
-}
 .invert-title {
   color: white;
 }
@@ -223,13 +218,13 @@ html[data-font-size='large'] {
   background-color: white;
   color: black;
 }
+.invert-active {
+  background-color: #272423;
+  color: white;
+  border: 0.125em solid white;
+}
 .invert-blue {
   background-color: #a8d1fb;
-}
-.invert-blue-active {
-  background-color: #a8d1fb;
-  color: midnightblue;
-  border: 0.125em solid midnightblue;
 }
 .invert-blue-title {
   color: #183762;
@@ -238,6 +233,11 @@ html[data-font-size='large'] {
   background-color: #183762;
   color: white;
   border: 0.125em solid #183762;
+}
+.invert-blue-active {
+  background-color: #a8d1fb;
+  color: midnightblue;
+  border: 0.125em solid midnightblue;
 }
 @media (min-width: 400px) and (max-width: 639px) {
   .block-container {
@@ -516,7 +516,7 @@ html[data-font-size='large'] {
   .block-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 360px 310px 410px;
+    grid-template-columns: 360px 315px 410px;
     grid-column-gap: 65px;
     width: 1440px;
     margin-left: auto;

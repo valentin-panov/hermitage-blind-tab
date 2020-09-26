@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="">
+<body>
 	<div class="block-container">
 		<div class="block-close">
 			<div class="block-close__line"></div>
@@ -17,53 +17,58 @@
 		<div class="block">
 			<div class="block-name title">Палитра сайта</div>
 			<div class="block__element palette">
-				<button class="block__element_mode block__element_mode_standart" data-text-palette-standart=''>Стандартная</button>
-				<button class="block__element_mode block__element_mode_inverse">Инверсия</button>
-				<button class="block__element_mode block__element_mode_blue">Синяя</button>
+				<button id="btn-standart" onclick="changeStandart()" class="block__element_mode block__element_mode_standart" data-text-palette-standart=''>Стандартная</button>
+				<button id="btn-inverse" onclick="changeInverse()" class="block__element_mode block__element_mode_inverse">Инверсия</button>
+				<button id="btn-blue" onclick="changeBlue()" class="block__element_mode block__element_mode_blue">Синяя</button>
 			</div>
 		</div>
 		<div class="block">
 			<div class="block-name title">Размер шрифта</div>
 			<div class="block__element">
-				<button class="block__element_mode_small active">A</button>
-				<button class="block__element_mode_medium">A</button>
-				<button class="block__element_mode_large">A</button>
+				<button id="btn-font-small" class="block__element_mode_small">A</button>
+				<button id="btn-font-medium" class="block__element_mode_medium">A</button>
+				<button id="btn-font-large" class="block__element_mode_large">A</button>
 			</div>
 		</div>
 		<div class="block">
 			<div class="block-name title">Межбуквенный интервал</div>
 			<div class="block__element">
-				<button class="block__element_mode_normal active" data-text-ltr-spacing-standart=''>Стандарт.</button>
-				<button class="block__element_mode_middle" data-text-ltr-spacing-middle=''>Увеличен.</button>
-				<button class="block__element_mode_big">Большой</button>
+				<button id="btn-ltr-spacing-normal" class="block__element_mode_normal" data-text-ltr-spacing-standart=''>Стандарт.</button>
+				<button id="btn-ltr-spacing-middle" class="block__element_mode_middle" data-text-ltr-spacing-middle=''>Увеличен.</button>
+				<button id="btn-ltr-spacing-big" class="block__element_mode_big">Большой</button>
 			</div>
 		</div>
 		<div class="block">
 			<div class="block-name title">Изображение</div>
 			<div class="block__element">
-				<button class="block__element_mode_show active">Показать</button>
-				<button class="block__element_mode_hide ">Скрыть</button>
+				<button id="btn-img-show" class="block__element_mode_show">Показать</button>
+				<button id="btn-img-hide" class="block__element_mode_hide">Скрыть</button>
 			</div>
 		</div>
 		<div class="block">
 			<div class="block-name title">Шрифт</div>
 			<div class="block__element">
-				<button class="block__element_mode_sansserif active">Без засечек</button>
-				<button class="block__element_mode_serif ">С засечками</button>
+				<button id="btn-ff-sansserif" class="block__element_mode_sansserif">Без засечек</button>
+				<button id="btn-ff-serif" class="block__element_mode_serif ">С засечками</button>
 			</div>
 		</div>
 		<div class="block">
 			<div class="block-name title">Межстрочный интервал</div>
 			<div class="block__element">
-				<button class="block__element_mode_single active">Одинарный</button>
-				<button class="block__element_mode_mid ">Полуторный</button>
-				<button class="block__element_mode_double ">Двойной</button>
+				<button id="btn-lh-single" class="block__element_mode_single">Одинарный</button>
+				<button id="btn-lh-mid" class="block__element_mode_mid">Полуторный</button>
+				<button id="btn-lh-double" class="block__element_mode_double">Двойной</button>
 			</div>
 		</div>
 		<div class="block-regularversion">
 			<a href="#" class="block-regularversion__link">Вернуться к обычной версии</a>
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" 
+			crossorigin="anonymous">
+	</script>	
+	<script src="scripts/script.js"></script>	
 </body>
 
 </html>

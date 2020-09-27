@@ -205,6 +205,9 @@ html[data-font-size='large'] {
             font-size: 0.875em;
             border-radius: 6px;
             margin-right: 2px;
+            &:before {
+                content: attr(data-text-lh-single);
+            }
 
         }
 
@@ -663,7 +666,7 @@ html[data-font-size='large'] {
     .block-container {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 360px 315px 410px;
+        grid-template-columns: 360px 345px 410px;
         grid-column-gap: 65px;
         width: 1440px;
         box-sizing: border-box;
@@ -710,7 +713,11 @@ html[data-font-size='large'] {
         &__element_mode {
             padding: 0.375em 1em;
             margin-right: 1em;
-
+            &_standart {
+                &:before {
+                    content: 'Стандартная';
+                }
+            }
             &_blue {
                 margin-right: 4em;
             }
@@ -733,6 +740,9 @@ html[data-font-size='large'] {
             &_normal {
                 padding: 0.375em 1em;
                 font-size: 1em;
+                &:before {
+                    content: 'Стандартный';
+                }
             }
 
             &_middle {
@@ -771,6 +781,9 @@ html[data-font-size='large'] {
             &_single {
                 padding: 0.375em 1em;
                 font-size: 1em;
+                &:before {
+                    content: 'Одинарный';
+                }
 
             }
 

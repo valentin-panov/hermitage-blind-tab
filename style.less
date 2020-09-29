@@ -264,6 +264,7 @@ html[data-font-size='large'] {
     color: @fontColorWhite;
     border: 0.125em solid @bgcWhite;
 }
+
 .spacial-panel-block-button__element_inverse_invert {
     border: 0.125em solid @bgcWhite;
 }
@@ -276,8 +277,10 @@ html[data-font-size='large'] {
     background-color: @bgcWhite;
     color: @fontColorBlack;
 }
+
 .spacial-panel-regularversion__link_invert {
     color: @fontColorWhite;
+
     &:hover {
         color: @fontColorWhite;
         text-decoration: underline;
@@ -293,17 +296,36 @@ html[data-font-size='large'] {
 .invert-blue-active {
     background-color: @backgroundBlue;
     color: @fontColorBlue;
-    border: 0.125em solid @fontColorBlue;
 }
 
-.invert-blue-title {
+.spacial-panel-name_blue {
     color: @bgcInvertBlue;
 }
 
-.invert-blue-element {
+.spacial-panel-long-block-button_blue {
     background-color: @bgcInvertBlue;
     color: @fontColorWhite;
     border: 0.125em solid @bgcInvertBlue;
+}
+.spacial-panel-block-button__element_standart_invert-blue {
+    border: 0.125em solid @bgcWhite;
+}
+.spacial-panel-block-button__element_inverse_invert-blue {
+    background-color: @bgcInvertBlue;
+    color: @fontColorWhite;
+    border: 0.125em solid @bgcInvertBlue;
+}
+.spacial-panel-block-button__element_blue_invert-blue {
+    border: 0.125em solid @bgcInvertBlue;
+}
+
+.spacial-panel-regularversion__link_blue {
+    color: @fontColorWhite;
+
+    &:hover {
+        color: @fontColorWhite;
+        text-decoration: underline;
+    }
 }
 
 //==================================
@@ -588,8 +610,6 @@ html[data-font-size='large'] {
             }
 
             &_inverse {
-                background-color: @bgcBlack;
-                color: @fontColorWhite;
                 margin-right: 10px;
             }
 
@@ -711,8 +731,6 @@ html[data-font-size='large'] {
             }
 
             &_inverse {
-                background-color: @bgcBlack;
-                color: @fontColorWhite;
                 margin-right: 10px;
             }
 
@@ -779,5 +797,4 @@ html[data-font-size='large'] {
         top: 244px;
     }
 }
-
 //медиа

@@ -224,15 +224,32 @@ html[data-font-size='large'] {
 .invert-blue-active {
   background-color: #a8d1fb;
   color: midnightblue;
-  border: 0.125em solid midnightblue;
 }
-.invert-blue-title {
+.spacial-panel-name_blue {
   color: #183762;
 }
-.invert-blue-element {
+.spacial-panel-long-block-button_blue {
   background-color: #183762;
   color: white;
   border: 0.125em solid #183762;
+}
+.spacial-panel-block-button__element_standart_invert-blue {
+  border: 0.125em solid white;
+}
+.spacial-panel-block-button__element_inverse_invert-blue {
+  background-color: #183762;
+  color: white;
+  border: 0.125em solid #183762;
+}
+.spacial-panel-block-button__element_blue_invert-blue {
+  border: 0.125em solid #183762;
+}
+.spacial-panel-regularversion__link_blue {
+  color: white;
+}
+.spacial-panel-regularversion__link_blue:hover {
+  color: white;
+  text-decoration: underline;
 }
 @media (min-width: 400px) and (max-width: 639px) {
   .spacial-panel-container {
@@ -435,8 +452,6 @@ html[data-font-size='large'] {
     content: attr(data-text-palette-standart);
   }
   .spacial-panel-block-button__element_inverse {
-    background-color: #272423;
-    color: white;
     margin-right: 10px;
   }
   .spacial-panel-block-button__element_blue {
@@ -526,8 +541,6 @@ html[data-font-size='large'] {
     content: attr(data-text-palette-standart);
   }
   .spacial-panel-block-button__element_inverse {
-    background-color: #272423;
-    color: white;
     margin-right: 10px;
   }
   .spacial-panel-block-button__element_blue {

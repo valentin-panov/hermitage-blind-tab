@@ -16,3 +16,8 @@ tmp/
 *.txt
 
 .vscode/
+#служебные папки компилятора
+scripts/dist
+dist
+#макеты
+layout

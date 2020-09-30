@@ -3,67 +3,118 @@
 <!-- атрибут - тестовое значение -->
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Панель для слабовидящих</title>
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель для слабовидящих</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="">
-	<div class="spacial-panel-container">
-		<div class="spacial-panel-close">
-			<div class="spacial-panel-close__line"></div>
-		</div>
-		<div class="spacial-panel">
-			<div class="spacial-panel-name">Палитра сайта</div>
-			<div class="spacial-panel-block-button ">
-				<button class="spacial-panel-block-button__element spacial-panel-block-button__element_standart" data-text-palette-standart=''>Стандартная</button>
-				<button class="spacial-panel-block-button__element spacial-panel-block-button__element_inverse">Инверсия</button>
-				<button class="spacial-panel-block-button__element spacial-panel-block-button__element_blue">Синяя</button>
-			</div>
-		</div>
-		<div class="spacial-panel">
-			<div class="spacial-panel-name">Размер шрифта</div>
-			<div class="spacial-panel-long-block-button">
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_small active">A</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_medium">A</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_large">A</button>
-			</div>
-		</div>
-		<div class="spacial-panel">
-			<div class="spacial-panel-name">Межбуквенный интервал</div>
-			<div class="spacial-panel-long-block-button">
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_normal active" data-text-ltr-spacing-standart=''>Стандарт.</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_middle" data-text-ltr-spacing-middle=''>Увеличен.</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_big">Большой</button>
-			</div>
-		</div>
-		<div class="spacial-panel">
-			<div class="spacial-panel-name">Изображение</div>
-			<div class="spacial-panel-long-block-button">
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_show active">Показать</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_hide">Скрыть</button>
-			</div>
-		</div>
-		<div class="spacial-panel">
-			<div class="spacial-panel-name">Шрифт</div>
-			<div class="spacial-panel-long-block-button">
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_sansserif active">Без засечек</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_serif">С засечками</button>
-			</div>
-		</div>
-		<div class="spacial-panel">
-			<div class="spacial-panel-name">Межстрочный интервал</div>
-			<div class="spacial-panel-long-block-button">
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_single active">Одинарн.</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_mid">Полуторный</button>
-				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_double">Двойной</button>
-			</div>
-		</div>
-		<div class="spacial-panel-regularversion">
-			<a href="#" class="spacial-panel-regularversion__link ">Вернуться к обычной версии</a>
-		</div>
-	</div>
+<body>
+<div class="spacial-panel-container">
+    <div class="spacial-panel-close">
+        <div class="spacial-panel-close__line"></div>
+    </div>
+    <div class="spacial-panel">
+        <div class="spacial-panel-name">Палитра сайта</div>
+        <div class="spacial-panel-block-button ">
+            <button id="btn-standart"
+                    class="spacial-panel-block-button__element spacial-panel-block-button__element_standart"
+                    data-text-palette-standart=''
+                    onclick="changeStandart()">Стандартная
+            </button>
+            <button id="btn-inverse"
+                    class="spacial-panel-block-button__element spacial-panel-block-button__element_inverse"
+                    onclick="changeInverse()">Инверсия
+            </button>
+            <button id="btn-blue" class="spacial-panel-block-button__element spacial-panel-block-button__element_blue"
+                    onclick="changeBlue()">Синий
+            </button>
+        </div>
+    </div>
+    <div class="spacial-panel">
+        <div class="spacial-panel-name">Размер шрифта</div>
+        <div class="spacial-panel-long-block-button">
+            <button id="btn-fnt-small"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_small active">
+                A
+            </button>
+            <button id="btn-fnt-medium"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_medium">A
+            </button>
+            <button id="btn-fnt-large"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_large">A
+            </button>
+        </div>
+    </div>
+    <div class="spacial-panel">
+        <div class="spacial-panel-name">Межбуквенный интервал</div>
+        <div class="spacial-panel-long-block-button">
+            <button id="btn-lts-spacing-normal"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_normal active"
+                    data-text-ltr-spacing-standart=''>Стандарт.
+            </button>
+            <button id="btn-lts-spacing-middle"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_middle"
+                    data-text-ltr-spacing-middle=''>Увеличен.
+            </button>
+            <button id="btn-lts-spacing-big"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_big">
+                Большой
+            </button>
+        </div>
+    </div>
+    <div class="spacial-panel">
+        <div class="spacial-panel-name">Изображение</div>
+        <div class="spacial-panel-long-block-button">
+            <button id="btn-img-show"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_show active">
+                Показать
+            </button>
+            <button id="btn-img-hide"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_hide">
+                Скрыть
+            </button>
+        </div>
+    </div>
+    <div class="spacial-panel">
+        <div class="spacial-panel-name">Шрифт</div>
+        <div class="spacial-panel-long-block-button">
+            <button id="btn-fnt-sansserif"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_sansserif active">
+                Без засечек
+            </button>
+            <button id="btn-fnt-serif"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_serif">С
+                засечками
+            </button>
+        </div>
+    </div>
+    <div class="spacial-panel">
+        <div class="spacial-panel-name">Межстрочный интервал</div>
+        <div class="spacial-panel-long-block-button">
+            <button id="btn-lh-single"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_single active">
+                Одинарн.
+            </button>
+            <button id="btn-lh-mid"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_mid">
+                Полуторный
+            </button>
+            <button id="btn-lh-double"
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_double">
+                Двойной
+            </button>
+        </div>
+    </div>
+    <div class="spacial-panel-regularversion">
+        <a href="#" class="spacial-panel-regularversion__link ">Вернуться к обычной версии</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous">
+</script>
+<script src="scripts/script.js"></script>
 </body>
 
 </html>

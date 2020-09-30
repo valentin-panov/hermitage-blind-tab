@@ -204,12 +204,16 @@ html[data-font-size='large'] {
 .spacial-panel-block-button__element_inverse_invert {
   border: 0.125em solid white;
 }
+.spacial-panel-block-button__element_blue_inverse-blue {
+  border: 0.125em solid #a8d1fb;
+}
 .spacial-panel-name_invert {
   color: white;
 }
 .spacial-panel-long-block-button_invert {
   background-color: white;
   color: black;
+  border: white;
 }
 .spacial-panel-regularversion__link_invert {
   color: white;
@@ -227,6 +231,9 @@ html[data-font-size='large'] {
 }
 .spacial-panel-name_blue {
   color: #183762;
+}
+.spacial-panel-btn-blue {
+  border: 0.125em solid #183762;
 }
 .spacial-panel-long-block-button_blue {
   background-color: #183762;
@@ -497,7 +504,7 @@ html[data-font-size='large'] {
     position: absolute;
     text-align: right;
     margin-right: 2.5em;
-    right: 0px;
+    right: 0;
     top: 331px;
   }
 }
@@ -505,7 +512,7 @@ html[data-font-size='large'] {
   .spacial-panel-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 422px 320px 410px;
+    grid-template-columns: 423px 323px 410px;
     grid-row-gap: 7px;
     width: 1440px;
     margin-left: auto;
@@ -588,3 +595,4 @@ html[data-font-size='large'] {
     top: 244px;
   }
 }
+/*# sourceMappingURL=style.css.map */

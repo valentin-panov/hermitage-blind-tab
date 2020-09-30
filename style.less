@@ -268,7 +268,9 @@ html[data-font-size='large'] {
 .spacial-panel-block-button__element_inverse_invert {
     border: 0.125em solid @bgcWhite;
 }
-
+.spacial-panel-block-button__element_blue_inverse-blue {
+    border: 0.125em solid @backgroundBlue;
+}
 .spacial-panel-name_invert {
     color: @fontColorWhite;
 }
@@ -276,6 +278,7 @@ html[data-font-size='large'] {
 .spacial-panel-long-block-button_invert {
     background-color: @bgcWhite;
     color: @fontColorBlack;
+    border: @bgcWhite;
 }
 
 .spacial-panel-regularversion__link_invert {
@@ -301,7 +304,9 @@ html[data-font-size='large'] {
 .spacial-panel-name_blue {
     color: @bgcInvertBlue;
 }
-
+.spacial-panel-btn-blue {
+    border: 0.125em solid @bgcInvertBlue;
+}
 .spacial-panel-long-block-button_blue {
     background-color: @bgcInvertBlue;
     color: @fontColorWhite;
@@ -674,7 +679,7 @@ html[data-font-size='large'] {
         position: absolute;
         text-align: right;
         margin-right: 2.5em;
-        right: 0px;
+        right: 0;
         top: 331px;
     }
 }
@@ -683,7 +688,7 @@ html[data-font-size='large'] {
     .spacial-panel-container {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 422px 320px 410px;
+        grid-template-columns: 423px 323px 410px;
         grid-row-gap: 7px;
         width: 1440px;
         box-sizing: border-box;

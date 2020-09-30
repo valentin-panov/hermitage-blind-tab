@@ -18,3 +18,4 @@ tmp/
 .vscode/
 dist/
 scripts/dist/
+layout/

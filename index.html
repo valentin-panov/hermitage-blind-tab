@@ -9,66 +9,61 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-	<div class="block-container">
-		<div class="block-close">
-			<div class="block-close__line"></div>
+<body class="">
+	<div class="spacial-panel-container">
+		<div class="spacial-panel-close">
+			<div class="spacial-panel-close__line"></div>
 		</div>
-		<div class="block">
-			<div class="block-name title">Палитра сайта</div>
-			<div class="block__element palette">
-				<button id="btn-standart" onclick="changeStandart()" class="block__element_mode block__element_mode_standart" data-text-palette-standart='Стандартная'></button>
-				<button id="btn-inverse" onclick="changeInverse()" class="block__element_mode block__element_mode_inverse">Инверсия</button>
-				<button id="btn-blue" onclick="changeBlue()" class="block__element_mode block__element_mode_blue">Синяя</button>
+		<div class="spacial-panel">
+			<div class="spacial-panel-name">Палитра сайта</div>
+			<div class="spacial-panel-block-button ">
+				<button class="spacial-panel-block-button__element spacial-panel-block-button__element_standart" data-text-palette-standart=''>Стандартная</button>
+				<button class="spacial-panel-block-button__element spacial-panel-block-button__element_inverse">Инверсия</button>
+				<button class="spacial-panel-block-button__element spacial-panel-block-button__element_blue">Синяя</button>
 			</div>
 		</div>
-		<div class="block">
-			<div class="block-name title">Размер шрифта</div>
-			<div class="block__element">
-				<button id="btn-font-small" onclick="changeFontInSmall()" class="block__element_mode_small">A</button>
-				<button id="btn-font-medium" onclick="changeFontInMedium()" class="block__element_mode_medium active">A</button>
-				<button id="btn-font-large" onclick="changeFontInLarge()" class="block__element_mode_large">A</button>
+		<div class="spacial-panel">
+			<div class="spacial-panel-name">Размер шрифта</div>
+			<div class="spacial-panel-long-block-button">
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_small active">A</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_medium">A</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_large">A</button>
 			</div>
 		</div>
-		<div class="block">
-			<div class="block-name title">Межбуквенный интервал</div>
-			<div class="block__element">
-				<button id="btn-ltr-spacing-normal" class="block__element_mode_normal active" data-text-ltr-spacing-standart='Стандарт.'></button>
-				<button id="btn-ltr-spacing-middle" class="block__element_mode_middle">Увеличен.</button>
-				<button id="btn-ltr-spacing-big" class="block__element_mode_big">Большой</button>
+		<div class="spacial-panel">
+			<div class="spacial-panel-name">Межбуквенный интервал</div>
+			<div class="spacial-panel-long-block-button">
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_normal active" data-text-ltr-spacing-standart=''>Стандарт.</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_middle" data-text-ltr-spacing-middle=''>Увеличен.</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_big">Большой</button>
 			</div>
 		</div>
-		<div class="block">
-			<div class="block-name title">Изображение</div>
-			<div class="block__element">
-				<button id="btn-img-show" class="block__element_mode_show active">Показать</button>
-				<button id="btn-img-hide" class="block__element_mode_hide">Скрыть</button>
+		<div class="spacial-panel">
+			<div class="spacial-panel-name">Изображение</div>
+			<div class="spacial-panel-long-block-button">
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_show active">Показать</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_hide">Скрыть</button>
 			</div>
 		</div>
-		<div class="block">
-			<div class="block-name title">Шрифт</div>
-			<div class="block__element">
-				<button id="btn-ff-sansserif" class="block__element_mode_sansserif active">Без засечек</button>
-				<button id="btn-ff-serif" class="block__element_mode_serif ">С засечками</button>
+		<div class="spacial-panel">
+			<div class="spacial-panel-name">Шрифт</div>
+			<div class="spacial-panel-long-block-button">
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_sansserif active">Без засечек</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_serif">С засечками</button>
 			</div>
 		</div>
-		<div class="block">
-			<div class="block-name title">Межстрочный интервал</div>
-			<div class="block__element">
-				<button id="btn-lh-single" class="block__element_mode_single active" data-text-lh-single='Одинарный'></button>
-				<button id="btn-lh-mid" class="block__element_mode_mid">Полуторный</button>
-				<button id="btn-lh-double" class="block__element_mode_double">Двойной</button>
+		<div class="spacial-panel">
+			<div class="spacial-panel-name">Межстрочный интервал</div>
+			<div class="spacial-panel-long-block-button">
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_single active">Одинарн.</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_mid">Полуторный</button>
+				<button class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_double">Двойной</button>
 			</div>
 		</div>
-		<div class="block-regularversion">
-			<a href="#" class="block-regularversion__link">Вернуться к обычной версии</a>
+		<div class="spacial-panel-regularversion">
+			<a href="#" class="spacial-panel-regularversion__link ">Вернуться к обычной версии</a>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" 
-			crossorigin="anonymous">
-	</script>	
-	<script src="scripts/script.js"></script>	
 </body>
 
 </html>

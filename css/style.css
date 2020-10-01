@@ -112,7 +112,7 @@ html[data-font-size='large'] {
   text-align: center;
 }
 .spacial-panel-long-block-button__element {
-  padding: 0.4em 0.35em;
+  padding: 0.38em 0.35em;
   font-size: 1em;
   border-radius: 6px;
   line-height: 1;
@@ -171,6 +171,9 @@ html[data-font-size='large'] {
 .spacial-panel-long-block-button__element_mid {
   font-size: 1em;
   margin-right: 2px;
+}
+.spacial-panel-long-block-button__element_mid:before {
+  content: attr(data-text-lh-mid);
 }
 .spacial-panel-long-block-button__element_double {
   font-size: 1em;
@@ -252,10 +255,10 @@ html[data-font-size='large'] {
   border: 0.125em solid #183762;
 }
 .spacial-panel-regularversion__link_blue {
-  color: white;
+  color: #183762;
 }
 .spacial-panel-regularversion__link_blue:hover {
-  color: white;
+  color: #183762;
   text-decoration: underline;
 }
 @media (min-width: 400px) and (max-width: 639px) {
@@ -595,4 +598,3 @@ html[data-font-size='large'] {
     top: 244px;
   }
 }
-/*# sourceMappingURL=style.css.map */

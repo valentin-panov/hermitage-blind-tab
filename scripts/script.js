@@ -155,7 +155,7 @@ function changeFontInLarge() {
     $('#btn-ltr-spacing-middle').attr('data-text-ltr-spacing-middle', 'Увелич.');
     $('#btn-lh-mid').attr('data-text-lh-mid', 'Полуторн.');
     $('#btn-lh-single').attr('data-text-lh-single', 'Одинар.');
-    $('.spacial-panel-container').css('grid-template-columns', '445px 360px 410px');
+    $('.spacial-panel-container').css('grid-template-columns', '446px 360px 410px');
 
     if ($('#btn-ltr-spacing-big').hasClass('active') ||
         $('#btn-ltr-spacing-big').hasClass('invert-active') ||
@@ -197,7 +197,7 @@ function changeLtrSpcNormal() {
     if ($('#btn-font-large').hasClass('active') ||
         $('#btn-font-large').hasClass('invert-active') ||
         $('#btn-font-large').hasClass('invert-blue-active')) {
-        $('.spacial-panel-container').css('grid-template-columns', '471px 406px 410px');
+        $('.spacial-panel-container').css('grid-template-columns', '473px 406px 410px');
 
     }
     if (bodyEl.hasClass('')) {
@@ -233,7 +233,7 @@ function changeLtrSpcMiddle() {
         $('#btn-font-large').hasClass('invert-active') ||
         $('#btn-font-large').hasClass('invert-blue-active')) {
         $('#btn-standart').attr('data-text-palette-standart', 'Стандарт.');
-        $('.spacial-panel-container').css('grid-template-columns', '466px 406px 410px');
+        $('.spacial-panel-container').css('grid-template-columns', '468px 406px 410px');
     }
     if (bodyEl.hasClass('invert')) {
         $('#btn-ltr-spacing-normal').removeClass('invert-active');
@@ -277,7 +277,7 @@ function changeLtrSpcBig() {
         $('#btn-ltr-spacing-normal').attr('data-text-ltr-spacing-normal', 'Станд.');
         $('#btn-ltr-spacing-middle').attr('data-text-ltr-spacing-middle', 'Увелич.');
         $('#btn-ltr-spacing-big').attr('data-text-ltr-spacing-big', 'Большой');
-        $('.spacial-panel-container').css('grid-template-columns', '464px 406px 410px');
+        $('.spacial-panel-container').css('grid-template-columns', '466px 406px 410px');
     }
     if ($('#btn-font-large').hasClass('active') ||
         $('#btn-font-large').hasClass('invert-active') ||

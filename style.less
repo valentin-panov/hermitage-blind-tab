@@ -108,7 +108,7 @@ html[data-font-size='large'] {
             color: @fontColorBlack;
             background-color: @bgcWhite;
             margin-right: 3px;
-
+            letter-spacing: inherit;
             &:before {
                 content: attr(data-text-palette-standart);
             }
@@ -118,6 +118,7 @@ html[data-font-size='large'] {
             background-color: @bgcBlack;
             color: @fontColorWhite;
             margin-right: 5px;
+            letter-spacing: inherit;
         }
 
         &_blue {
@@ -125,6 +126,7 @@ html[data-font-size='large'] {
             color: @fontColorBlue;
             border: 0.125em solid @backgroundBlue;
             padding: 0.4em 0.3em;
+            letter-spacing: inherit;
         }
     }
 
@@ -144,6 +146,7 @@ html[data-font-size='large'] {
             font-size: 1em;
             border-radius: 6px;
             line-height: 1;
+            letter-spacing: inherit;
 
             &_small {
                 padding: 0.25em 1.9em;
@@ -167,7 +170,7 @@ html[data-font-size='large'] {
                 margin-right: 2px;
 
                 &:before {
-                    content: attr(data-text-ltr-spacing-standart);
+                    content: attr(data-text-ltr-spacing-normal);
                 }
             }
 
@@ -182,6 +185,9 @@ html[data-font-size='large'] {
             &_big {
                 font-size: 1em;
                 letter-spacing: 0.12em;
+                &:before {
+                    content: attr(data-text-ltr-spacing-big);
+                }
             }
 
             &_show {
@@ -207,7 +213,9 @@ html[data-font-size='large'] {
             &_single {
                 font-size: 1em;
                 margin-right: 2px;
-
+                &:before {
+                    content: attr(data-text-lh-single);
+                }
             }
 
             &_mid {
@@ -432,7 +440,7 @@ html[data-font-size='large'] {
 
                 &_normal {
                     &:before {
-                        content: attr(data-text-ltr-spacing-standart);
+                        content: attr(data-text-ltr-spacing-normal);
                     }
                 }
 
@@ -539,7 +547,7 @@ html[data-font-size='large'] {
 
                 &_normal {
                     &:before {
-                        content: attr(data-text-ltr-spacing-standart);
+                        content: attr(data-text-ltr-spacing-normal);
                     }
                 }
 
@@ -652,7 +660,7 @@ html[data-font-size='large'] {
 
                 &_normal {
                     &:before {
-                        content: attr(data-text-ltr-spacing-standart);
+                        content: attr(data-text-ltr-spacing-normal);
                     }
                 }
 

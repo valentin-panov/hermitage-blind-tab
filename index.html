@@ -41,7 +41,8 @@
             </button>
             <button id="btn-font-medium"
                     onclick="changeFontInMedium()"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_medium active">A
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_medium active">
+                A
             </button>
             <button id="btn-font-large"
                     onclick="changeFontInLarge()"
@@ -54,15 +55,18 @@
         <div class="spacial-panel-long-block-button">
             <button id="btn-ltr-spacing-normal"
                     class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_normal active"
-                    data-text-ltr-spacing-standart='Стандарт.'>
+                    onclick="changeLtrSpcNormal()"
+                    data-text-ltr-spacing-normal='Стандарт.'>
             </button>
             <button id="btn-ltr-spacing-middle"
                     class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_middle"
+                    onclick="changeLtrSpcMiddle()"
                     data-text-ltr-spacing-middle='Увеличен.'>
             </button>
             <button id="btn-ltr-spacing-big"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_big">
-                Большой
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_big"
+                    onclick="changeLtrSpcBig()"
+                    data-text-ltr-spacing-big='Большой'>
             </button>
         </div>
     </div>
@@ -96,8 +100,8 @@
         <div class="spacial-panel-name">Межстрочный интервал</div>
         <div class="spacial-panel-long-block-button">
             <button id="btn-lh-single"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_single active">
-                Одинарн.
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_single active"
+                    data-text-lh-single="Одинарный">
             </button>
             <button id="btn-lh-mid"
                     class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_mid"

@@ -85,6 +85,7 @@ html[data-font-size='large'] {
   color: black;
   background-color: white;
   margin-right: 3px;
+  letter-spacing: inherit;
 }
 .spacial-panel-block-button__element_standart:before {
   content: attr(data-text-palette-standart);
@@ -93,12 +94,14 @@ html[data-font-size='large'] {
   background-color: #272423;
   color: white;
   margin-right: 5px;
+  letter-spacing: inherit;
 }
 .spacial-panel-block-button__element_blue {
   background-color: #a8d1fb;
   color: midnightblue;
   border: 0.125em solid #a8d1fb;
   padding: 0.4em 0.3em;
+  letter-spacing: inherit;
 }
 .spacial-panel-long-block-button {
   display: inline-flex;
@@ -116,6 +119,7 @@ html[data-font-size='large'] {
   font-size: 1em;
   border-radius: 6px;
   line-height: 1;
+  letter-spacing: inherit;
 }
 .spacial-panel-long-block-button__element_small {
   padding: 0.25em 1.9em;
@@ -136,7 +140,7 @@ html[data-font-size='large'] {
   margin-right: 2px;
 }
 .spacial-panel-long-block-button__element_normal:before {
-  content: attr(data-text-ltr-spacing-standart);
+  content: attr(data-text-ltr-spacing-normal);
 }
 .spacial-panel-long-block-button__element_middle {
   margin-right: 2px;
@@ -147,6 +151,9 @@ html[data-font-size='large'] {
 .spacial-panel-long-block-button__element_big {
   font-size: 1em;
   letter-spacing: 0.12em;
+}
+.spacial-panel-long-block-button__element_big:before {
+  content: attr(data-text-ltr-spacing-big);
 }
 .spacial-panel-long-block-button__element_show {
   font-size: 1em;
@@ -167,6 +174,9 @@ html[data-font-size='large'] {
 .spacial-panel-long-block-button__element_single {
   font-size: 1em;
   margin-right: 2px;
+}
+.spacial-panel-long-block-button__element_single:before {
+  content: attr(data-text-lh-single);
 }
 .spacial-panel-long-block-button__element_mid {
   font-size: 1em;
@@ -331,7 +341,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle:before {
     content: attr(data-text-ltr-spacing-middle);
@@ -406,7 +416,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle {
     letter-spacing: 0.07em;
@@ -488,7 +498,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle {
     letter-spacing: 0.06em;

@@ -587,7 +587,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle {
     letter-spacing: 0.06em;

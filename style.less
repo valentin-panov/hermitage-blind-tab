@@ -119,6 +119,9 @@ html[data-font-size='large'] {
             color: @fontColorWhite;
             margin-right: 5px;
             letter-spacing: inherit;
+            &:before {
+                content: attr(data-text-palette-inverse);
+            }
         }
 
         &_blue {
@@ -249,7 +252,6 @@ html[data-font-size='large'] {
     margin-right: 1.5em;
 
     &__link {
-        font-family: Roboto, sans-serif;
         font-size: 1em;
         color: @fontColorBlack;
 
@@ -810,7 +812,7 @@ html[data-font-size='large'] {
     .spacial-panel-regularversion {
         position: absolute;
         right: 16px;
-        top: 244px;
+        bottom: 0;
     }
 }
 //медиа

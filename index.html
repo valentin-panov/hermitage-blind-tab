@@ -24,7 +24,8 @@
             </button>
             <button id="btn-inverse"
                     class="spacial-panel-block-button__element spacial-panel-block-button__element_inverse"
-                    onclick="changeInverse()">Инверсия
+                    data-text-palette-inverse="Инверсия"
+                    onclick="changeInverse()">
             </button>
             <button id="btn-blue" class="spacial-panel-block-button__element spacial-panel-block-button__element_blue"
                     onclick="changeBlue()">Синяя
@@ -74,11 +75,13 @@
         <div class="spacial-panel-name">Изображение</div>
         <div class="spacial-panel-long-block-button">
             <button id="btn-img-show"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_show active">
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_show active"
+                    onclick="showImg()">
                 Показать
             </button>
             <button id="btn-img-hide"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_hide">
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_hide"
+                    onclick="hideImg()">
                 Скрыть
             </button>
         </div>
@@ -87,11 +90,13 @@
         <div class="spacial-panel-name">Шрифт</div>
         <div class="spacial-panel-long-block-button">
             <button id="btn-fnt-sansserif"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_sansserif active">
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_sansserif active"
+                    onclick="switchFontOnSansserif()">
                 Без засечек
             </button>
             <button id="btn-fnt-serif"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_serif">С
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_serif"
+                    onclick='switchFontOnSerif()'>С
                 засечками
             </button>
         </div>
@@ -101,14 +106,17 @@
         <div class="spacial-panel-long-block-button">
             <button id="btn-lh-single"
                     class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_single active"
-                    data-text-lh-single="Одинарный">
+                    data-text-lh-single="Одинарный"
+                    onclick="changeLHSingle()">
             </button>
             <button id="btn-lh-mid"
                     class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_mid"
-                    data-text-lh-mid='Полуторный'>
+                    data-text-lh-mid='Полуторный'
+                    onclick="changeLHMid()">
             </button>
             <button id="btn-lh-double"
-                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_double">
+                    class="spacial-panel-long-block-button__element spacial-panel-long-block-button__element_double"
+                    onclick="changeLHDouble()">
                 Двойной
             </button>
         </div>

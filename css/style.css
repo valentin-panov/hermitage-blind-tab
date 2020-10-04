@@ -587,6 +587,7 @@ html[data-font-size='large'] {
   .spacial-panel-long-block-button__element_large {
     padding: 0 0.7em;
     font-size: 2em;
+    border-radius: 8px;
   }
   .spacial-panel-long-block-button__element_normal:before {
     content: attr(data-text-ltr-spacing-normal);

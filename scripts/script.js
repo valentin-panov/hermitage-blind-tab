@@ -50,6 +50,8 @@ function changeStandart() {
       }
     });
   }
+  elementsStorage.bodyEl.classList.add('normal');//изменяет общий цвет страницы
+
 }
 
 //палитра сайта- инверсия
@@ -74,6 +76,7 @@ function changeInverse() {
     });
     clearClass();
   }
+  elementsStorage.bodyEl.classList.toggle('normal')
   elementsStorage.bodyEl.classList.toggle('invert');//изменяет общий цвет страницы
   elementsStorage.elementPanelName.forEach(item => item.classList.toggle('spacial-panel-name_invert'))
   elementsStorage.btnStandart.classList.toggle('spacial-panel-block-button__element_inverse_invert')//добавляет белую рамку стандартной кнопке
@@ -106,6 +109,7 @@ function changeBlue() {
     })
     clearClass();
   }
+  elementsStorage.bodyEl.classList.toggle('normal')
   elementsStorage.bodyEl.classList.toggle('invert-blue');//изменяет общий цвет страницы
   elementsStorage.elementPanelName.forEach(item => item.classList.toggle('spacial-panel-name_blue'))
   elementsStorage.btnStandart.classList.toggle('spacial-panel-block-button__element_inverse_invert'); //добавляет белую рамку стандартной кнопке
@@ -120,7 +124,7 @@ function changeFontInSmall() {
   elementsStorage.htmlEl.setAttribute('data-font-size', 'small')
   elementsStorage.btnLtrSpacingNormal.setAttribute('data-text-ltr-spacing-normal', 'Стандартный');
   elementsStorage.btnLtrSpacingMiddle.setAttribute('data-text-ltr-spacing-middle', 'Увеличенный');
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnFontSmall.classList.add('active');
     elementsStorage.btnFontMedium.classList.remove('active');
     elementsStorage.btnFontLarge.classList.remove('active');
@@ -157,7 +161,7 @@ function changeFontInMedium() {
     elementsStorage.btnFontMedium.classList.add('invert-active');
     elementsStorage.btnFontLarge.classList.remove('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnFontSmall.classList.remove('active');
     elementsStorage.btnFontMedium.classList.add('active');
     elementsStorage.btnFontLarge.classList.remove('active');
@@ -192,7 +196,7 @@ function changeFontInLarge() {
     elementsStorage.btnLtrSpacingMiddle.classList.contains('invert-blue-active')) {
     elementsStorage.elementContainer.style.gridTemplateColumns = '466px 406px 410px';
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnFontSmall.classList.remove('active');
     elementsStorage.btnFontMedium.classList.remove('active');
     elementsStorage.btnFontLarge.classList.add('active');
@@ -220,7 +224,7 @@ function changeLtrSpcNormal() {
     elementsStorage.elementContainer.style.gridTemplateColumns = '473px 406px 410px';
 
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnLtrSpacingNormal.classList.add('active');
     elementsStorage.btnLtrSpacingMiddle.classList.remove('active');
     elementsStorage.btnLtrSpacingBig.classList.remove('active');
@@ -260,7 +264,7 @@ function changeLtrSpcMiddle() {
     elementsStorage.btnLtrSpacingMiddle.classList.add('invert-active');
     elementsStorage.btnLtrSpacingBig.classList.remove('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnLtrSpacingNormal.classList.remove('active');
     elementsStorage.btnLtrSpacingMiddle.classList.add('active');
     elementsStorage.btnLtrSpacingBig.classList.remove('active');
@@ -321,7 +325,7 @@ function changeLtrSpcBig() {
     elementsStorage.btnLtrSpacingMiddle.classList.remove('invert-active');
     elementsStorage.btnLtrSpacingBig.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnLtrSpacingNormal.classList.remove('active');
     elementsStorage.btnLtrSpacingMiddle.classList.remove('active');
     elementsStorage.btnLtrSpacingBig.classList.add('active');
@@ -340,7 +344,7 @@ function showImg() {
     elementsStorage.btnHideImg.classList.remove('invert-active');
     elementsStorage.btnShowImg.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnHideImg.classList.remove('active');
     elementsStorage.btnShowImg.classList.add('active');
   }
@@ -355,7 +359,7 @@ function hideImg() {
     elementsStorage.btnShowImg.classList.remove('invert-active');
     elementsStorage.btnHideImg.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnShowImg.classList.remove('active');
     elementsStorage.btnHideImg.classList.add('active');
   }
@@ -374,7 +378,7 @@ function switchFontOnSansserif() {
     elementsStorage.btnFontSerif.classList.remove('invert-active');
     elementsStorage.btnFontSansserif.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnFontSerif.classList.remove('active');
     elementsStorage.btnFontSansserif.classList.add('active');
   }
@@ -392,7 +396,7 @@ function switchFontOnSerif() {
     elementsStorage.btnFontSansserif.classList.remove('invert-active');
     elementsStorage.btnFontSerif.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnFontSansserif.classList.remove('active');
     elementsStorage.btnFontSerif.classList.add('active');
   }
@@ -416,7 +420,7 @@ function changeLHSingle() {
     elementsStorage.btnLHMid.classList.remove('invert-active');
     elementsStorage.btnLHSingle.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnLHDouble.classList.remove('active');
     elementsStorage.btnLHMid.classList.remove('active');
     elementsStorage.btnLHSingle.classList.add('active');
@@ -440,7 +444,7 @@ function changeLHMid() {
     elementsStorage.btnLHSingle.classList.remove('invert-active');
     elementsStorage.btnLHMid.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnLHDouble.classList.remove('active');
     elementsStorage.btnLHSingle.classList.remove('active');
     elementsStorage.btnLHMid.classList.add('active');
@@ -465,7 +469,7 @@ function changeLHDouble() {
     elementsStorage.btnLHMid.classList.remove('invert-active');
     elementsStorage.btnLHDouble.classList.add('invert-active');
   }
-  if (!elementsStorage.bodyEl.classList.contains('')) {
+  if (elementsStorage.bodyEl.classList.contains('normal')) {
     elementsStorage.btnLHSingle.classList.remove('active');
     elementsStorage.btnLHMid.classList.remove('active');
     elementsStorage.btnLHDouble.classList.add('active');
@@ -478,7 +482,7 @@ function changeLHDouble() {
 }
 
 function clearClass() {
-  elementsStorage.bodyEl.classList.value = '';
+  elementsStorage.bodyEl.classList.value = 'normal';
   elementsStorage.elementPanelName.forEach(item => {
     item.classList.value = '';
     item.classList.add('spacial-panel-name');

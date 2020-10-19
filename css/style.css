@@ -5,6 +5,10 @@ body {
   padding: 0;
   background-color: white;
 }
+:focus,
+:active {
+  outline: none;
+}
 a {
   text-decoration: none;
 }

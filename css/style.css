@@ -5,6 +5,10 @@ body {
   padding: 0;
   background-color: white;
 }
+:focus,
+:active {
+  outline: none;
+}
 a {
   text-decoration: none;
 }
@@ -85,6 +89,7 @@ html[data-font-size='large'] {
   color: black;
   background-color: white;
   margin-right: 3px;
+  letter-spacing: inherit;
 }
 .spacial-panel-block-button__element_standart:before {
   content: attr(data-text-palette-standart);
@@ -93,12 +98,17 @@ html[data-font-size='large'] {
   background-color: #272423;
   color: white;
   margin-right: 5px;
+  letter-spacing: inherit;
+}
+.spacial-panel-block-button__element_inverse:before {
+  content: attr(data-text-palette-inverse);
 }
 .spacial-panel-block-button__element_blue {
   background-color: #a8d1fb;
   color: midnightblue;
   border: 0.125em solid #a8d1fb;
   padding: 0.4em 0.3em;
+  letter-spacing: inherit;
 }
 .spacial-panel-long-block-button {
   display: inline-flex;
@@ -112,10 +122,11 @@ html[data-font-size='large'] {
   text-align: center;
 }
 .spacial-panel-long-block-button__element {
-  padding: 0.4em 0.35em;
+  padding: 0.38em 0.35em;
   font-size: 1em;
   border-radius: 6px;
   line-height: 1;
+  letter-spacing: inherit;
 }
 .spacial-panel-long-block-button__element_small {
   padding: 0.25em 1.9em;
@@ -136,7 +147,7 @@ html[data-font-size='large'] {
   margin-right: 2px;
 }
 .spacial-panel-long-block-button__element_normal:before {
-  content: attr(data-text-ltr-spacing-standart);
+  content: attr(data-text-ltr-spacing-normal);
 }
 .spacial-panel-long-block-button__element_middle {
   margin-right: 2px;
@@ -147,6 +158,9 @@ html[data-font-size='large'] {
 .spacial-panel-long-block-button__element_big {
   font-size: 1em;
   letter-spacing: 0.12em;
+}
+.spacial-panel-long-block-button__element_big:before {
+  content: attr(data-text-ltr-spacing-big);
 }
 .spacial-panel-long-block-button__element_show {
   font-size: 1em;
@@ -168,9 +182,15 @@ html[data-font-size='large'] {
   font-size: 1em;
   margin-right: 2px;
 }
+.spacial-panel-long-block-button__element_single:before {
+  content: attr(data-text-lh-single);
+}
 .spacial-panel-long-block-button__element_mid {
   font-size: 1em;
   margin-right: 2px;
+}
+.spacial-panel-long-block-button__element_mid:before {
+  content: attr(data-text-lh-mid);
 }
 .spacial-panel-long-block-button__element_double {
   font-size: 1em;
@@ -185,7 +205,6 @@ html[data-font-size='large'] {
   margin-right: 1.5em;
 }
 .spacial-panel-regularversion__link {
-  font-family: Roboto, sans-serif;
   font-size: 1em;
   color: black;
 }
@@ -204,12 +223,16 @@ html[data-font-size='large'] {
 .spacial-panel-block-button__element_inverse_invert {
   border: 0.125em solid white;
 }
+.spacial-panel-block-button__element_blue_inverse-blue {
+  border: 0.125em solid #a8d1fb;
+}
 .spacial-panel-name_invert {
   color: white;
 }
 .spacial-panel-long-block-button_invert {
   background-color: white;
   color: black;
+  border: white;
 }
 .spacial-panel-regularversion__link_invert {
   color: white;
@@ -228,6 +251,9 @@ html[data-font-size='large'] {
 .spacial-panel-name_blue {
   color: #183762;
 }
+.spacial-panel-btn-blue {
+  border: 0.125em solid #183762;
+}
 .spacial-panel-long-block-button_blue {
   background-color: #183762;
   color: white;
@@ -245,10 +271,10 @@ html[data-font-size='large'] {
   border: 0.125em solid #183762;
 }
 .spacial-panel-regularversion__link_blue {
-  color: white;
+  color: #183762;
 }
 .spacial-panel-regularversion__link_blue:hover {
-  color: white;
+  color: #183762;
   text-decoration: underline;
 }
 @media (min-width: 400px) and (max-width: 639px) {
@@ -321,7 +347,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle:before {
     content: attr(data-text-ltr-spacing-middle);
@@ -396,7 +422,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle {
     letter-spacing: 0.07em;
@@ -478,7 +504,7 @@ html[data-font-size='large'] {
     font-size: 2em;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle {
     letter-spacing: 0.06em;
@@ -497,7 +523,7 @@ html[data-font-size='large'] {
     position: absolute;
     text-align: right;
     margin-right: 2.5em;
-    right: 0px;
+    right: 0;
     top: 331px;
   }
 }
@@ -505,7 +531,7 @@ html[data-font-size='large'] {
   .spacial-panel-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 422px 320px 410px;
+    grid-template-columns: 423px 323px 410px;
     grid-row-gap: 7px;
     width: 1440px;
     margin-left: auto;
@@ -565,9 +591,10 @@ html[data-font-size='large'] {
   .spacial-panel-long-block-button__element_large {
     padding: 0 0.7em;
     font-size: 2em;
+    border-radius: 8px;
   }
   .spacial-panel-long-block-button__element_normal:before {
-    content: attr(data-text-ltr-spacing-standart);
+    content: attr(data-text-ltr-spacing-normal);
   }
   .spacial-panel-long-block-button__element_middle {
     letter-spacing: 0.06em;
@@ -585,6 +612,6 @@ html[data-font-size='large'] {
   .spacial-panel-regularversion {
     position: absolute;
     right: 16px;
-    top: 244px;
+    bottom: 0;
   }
 }
